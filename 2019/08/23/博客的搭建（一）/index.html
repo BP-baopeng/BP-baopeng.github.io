@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="鲍鹏的个人博客">
 <meta property="og:description" content="写在前面折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。  一、环境配置作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。下面我具体说一下Hexo安装以及使用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-25T01:05:14.331Z">
+<meta property="og:updated_time" content="2019-08-30T14:51:52.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客的搭建（一）">
 <meta name="twitter:description" content="写在前面折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。  一、环境配置作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。下面我具体说一下Hexo安装以及使用。">
@@ -267,7 +267,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-25 09:05:14" itemprop="dateModified" datetime="2019-08-25T09:05:14+08:00">2019-08-25</time>
+                <time title="修改时间：2019-08-30 22:51:52" itemprop="dateModified" datetime="2019-08-30T22:51:52+08:00">2019-08-30</time>
               </span>
             
           
@@ -316,39 +316,48 @@
 <h3 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h3><p>作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。<br>下面我具体说一下Hexo安装以及使用。</p>
 <a id="more"></a>
 <hr>
-<h4 id="使用npm安装Hexo"><a href="#使用npm安装Hexo" class="headerlink" title="使用npm安装Hexo"></a>使用npm安装Hexo</h4><blockquote><p>$ npm install hexo-cli -g</p>
+<h4 id="使用npm安装Hexo"><a href="#使用npm安装Hexo" class="headerlink" title="使用npm安装Hexo"></a>使用npm安装Hexo</h4><blockquote>
+<p>$ npm install hexo-cli -g</p>
 </blockquote>
 <p>安装完成后通过hexo-v,查看时候安装成功</p>
-<blockquote><p>$ hexo -v</p>
+<blockquote>
+<p>$ hexo -v</p>
 </blockquote>
 <h4 id="创建资源文件夹"><a href="#创建资源文件夹" class="headerlink" title="创建资源文件夹"></a>创建资源文件夹</h4><p>安装 Hexo 完成后，在你任一目录下新建文件夹命名为Blog（替换成你喜欢的名字），然后cd到Blog文件夹下</p>
-<blockquote><p>$ cd Blog<br>$ hexo init Blog</p>
+<blockquote>
+<p>$ cd Blog<br>$ hexo init Blog</p>
 </blockquote>
 <p>根目录创建成功后，需要下载依赖的文件</p>
-<blockquote><p>$ npm install</p>
+<blockquote>
+<p>$ npm install</p>
 </blockquote>
 <p>下载完成后即可开始个性化配置。</p>
 <hr>
 <h3 id="二、基本使用"><a href="#二、基本使用" class="headerlink" title="二、基本使用"></a>二、基本使用</h3><h4 id="本地预览博客"><a href="#本地预览博客" class="headerlink" title="本地预览博客"></a>本地预览博客</h4><p>通过hexo serve命令，预览当前博客</p>
-<blockquote><p>$ hexo serve</p>
+<blockquote>
+<p>$ hexo serve</p>
 </blockquote>
 <p>打开浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，即可预览当前博客</p>
 <h4 id="创建一篇新的博客"><a href="#创建一篇新的博客" class="headerlink" title="创建一篇新的博客"></a>创建一篇新的博客</h4><p>输入hexo new post + name，可以创建一篇新的博客</p>
-<blockquote><p>hexo new post name</p>
+<blockquote>
+<p>hexo new post name</p>
 </blockquote>
 <p>在source/_posts文件夹下会生成一个md文件</p>
 <h4 id="创建主页"><a href="#创建主页" class="headerlink" title="创建主页"></a>创建主页</h4><p>同理通过hexo new page + name，可以创建主页</p>
 <hr>
 <h3 id="三、博客发布"><a href="#三、博客发布" class="headerlink" title="三、博客发布"></a>三、博客发布</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>Hexo给我提供了插件，可以方便我们进行git上传</p>
-<blockquote><p>npm install hexo-deployer-git –save</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
 </blockquote>
 <p>安装完成之后，需要更改跟目录下的_config.yml文件的内容</p>
-<blockquote><p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/username/username.github.io.git" target="_blank" rel="noopener">https://github.com/username/username.github.io.git</a></p>
-</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="生成Html文件"><a href="#生成Html文件" class="headerlink" title="生成Html文件"></a>生成Html文件</h4><p>上传到Github之前，需要把博客系统编译成html</p>
-<blockquote><p>hexo generat</p>
+<blockquote>
+<p>hexo generat</p>
 </blockquote>
-<h4 id="提交到Git仓库"><a href="#提交到Git仓库" class="headerlink" title="提交到Git仓库"></a>提交到Git仓库</h4><blockquote><p>hexo deploy</p>
+<h4 id="提交到Git仓库"><a href="#提交到Git仓库" class="headerlink" title="提交到Git仓库"></a>提交到Git仓库</h4><blockquote>
+<p>hexo deploy</p>
 </blockquote>
 <h4 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h4><p>在每次使用hexo generat部署之后，可以先使用 hexo serve 运行本地站点，然后在浏览器输入地址 <a href="http://lacolhost:4000/" target="_blank" rel="noopener">http://lacolhost:4000/</a> 查看运行结果，检查无误后再使用 hexo deploy 发布</p>
 
@@ -377,7 +386,7 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
-  <p><span>最后更新:</span>2019年08月25日 - 09:08</p>
+  <p><span>最后更新:</span>2019年08月30日 - 22:08</p>
   <p><span>原始链接:</span><a href="/2019/08/23/博客的搭建（一）/" title="博客的搭建（一）">http://yoursite.com/2019/08/23/博客的搭建（一）/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/08/23/博客的搭建（一）/"  aria-label="复制成功！"></i></span>
   </p>
@@ -496,7 +505,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -542,7 +551,9 @@
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
