@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="写在前面折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。  一、环境配置作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。下面我具体说一下Hexo安装以及使用。">
-<meta name="keywords" content=" Hexo">
+  <meta name="description" content="本文介绍了axios的基础使用">
+<meta name="keywords" content="Vue,axios">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客的搭建（一）">
-<meta property="og:url" content="http://yoursite.com/2019/08/23/博客的搭建（一）/index.html">
+<meta property="og:title" content="axios的基础使用">
+<meta property="og:url" content="http://yoursite.com/2019/09/02/axios的基础使用/index.html">
 <meta property="og:site_name" content="鲍鹏的个人博客">
-<meta property="og:description" content="写在前面折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。  一、环境配置作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。下面我具体说一下Hexo安装以及使用。">
+<meta property="og:description" content="本文介绍了axios的基础使用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-30T14:51:52.397Z">
+<meta property="og:updated_time" content="2019-09-02T13:35:52.546Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客的搭建（一）">
-<meta name="twitter:description" content="写在前面折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。  一、环境配置作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。下面我具体说一下Hexo安装以及使用。">
-  <link rel="canonical" href="http://yoursite.com/2019/08/23/博客的搭建（一）/">
+<meta name="twitter:title" content="axios的基础使用">
+<meta name="twitter:description" content="本文介绍了axios的基础使用">
+  <link rel="canonical" href="http://yoursite.com/2019/09/02/axios的基础使用/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>博客的搭建（一） | 鲍鹏的个人博客</title>
+  <title>axios的基础使用 | 鲍鹏的个人博客</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -228,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/博客的搭建（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/axios的基础使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鲍鹏">
@@ -240,7 +240,7 @@
       <meta itemprop="name" content="鲍鹏的个人博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">博客的搭建（一）
+        <h1 class="post-title" itemprop="name headline">axios的基础使用
 
           
         </h1>
@@ -256,19 +256,11 @@
                 
               
 
-              <time title="创建时间：2019-08-23 22:14:57" itemprop="dateCreated datePublished" datetime="2019-08-23T22:14:57+08:00">2019-08-23</time>
+              <time title="创建时间：2019-09-02 21:25:45 / 修改时间：21:35:52" itemprop="dateCreated datePublished" datetime="2019-09-02T21:25:45+08:00">2019-09-02</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-30 22:51:52" itemprop="dateModified" datetime="2019-08-30T22:51:52+08:00">2019-08-30</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -277,14 +269,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/vue基础/" itemprop="url" rel="index"><span itemprop="name">vue基础</span></a></span>
 
                 
                 
@@ -311,55 +303,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>折腾了一晚上，终于把博客搭起来了，用的是Hexo框架，基于Node.js，还需要Git仓库管理代码，在这里推荐大家使用GitHub，所以我们需要安装Git、Node.js以及安装Hexo，并且安装到全局。</p>
-<hr>
-<h3 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h3><p>作为IT工作者，相信大家电脑里应该都安装了Git、Node.js，不会安装的小伙伴可以上网搜一下教程。<br>下面我具体说一下Hexo安装以及使用。</p>
-<a id="more"></a>
-<hr>
-<h4 id="使用npm安装Hexo"><a href="#使用npm安装Hexo" class="headerlink" title="使用npm安装Hexo"></a>使用npm安装Hexo</h4><blockquote>
-<p>$ npm install hexo-cli -g</p>
-</blockquote>
-<p>安装完成后通过hexo-v,查看时候安装成功</p>
-<blockquote>
-<p>$ hexo -v</p>
-</blockquote>
-<h4 id="创建资源文件夹"><a href="#创建资源文件夹" class="headerlink" title="创建资源文件夹"></a>创建资源文件夹</h4><p>安装 Hexo 完成后，在你任一目录下新建文件夹命名为Blog（替换成你喜欢的名字），然后cd到Blog文件夹下</p>
-<blockquote>
-<p>$ cd Blog<br>$ hexo init Blog</p>
-</blockquote>
-<p>根目录创建成功后，需要下载依赖的文件</p>
-<blockquote>
-<p>$ npm install</p>
-</blockquote>
-<p>下载完成后即可开始个性化配置。</p>
-<hr>
-<h3 id="二、基本使用"><a href="#二、基本使用" class="headerlink" title="二、基本使用"></a>二、基本使用</h3><h4 id="本地预览博客"><a href="#本地预览博客" class="headerlink" title="本地预览博客"></a>本地预览博客</h4><p>通过hexo serve命令，预览当前博客</p>
-<blockquote>
-<p>$ hexo serve</p>
-</blockquote>
-<p>打开浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，即可预览当前博客</p>
-<h4 id="创建一篇新的博客"><a href="#创建一篇新的博客" class="headerlink" title="创建一篇新的博客"></a>创建一篇新的博客</h4><p>输入hexo new post + name，可以创建一篇新的博客</p>
-<blockquote>
-<p>hexo new post name</p>
-</blockquote>
-<p>在source/_posts文件夹下会生成一个md文件</p>
-<h4 id="创建主页"><a href="#创建主页" class="headerlink" title="创建主页"></a>创建主页</h4><p>同理通过hexo new page + name，可以创建主页</p>
-<hr>
-<h3 id="三、博客发布"><a href="#三、博客发布" class="headerlink" title="三、博客发布"></a>三、博客发布</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>Hexo给我提供了插件，可以方便我们进行git上传</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>安装完成之后，需要更改跟目录下的_config.yml文件的内容</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/username/username.github.io.git</span></span><br></pre></td></tr></table></figure>
+        <ul>
+<li>本文介绍了axios的基础使用<a id="more"></a>
 
-<h4 id="生成Html文件"><a href="#生成Html文件" class="headerlink" title="生成Html文件"></a>生成Html文件</h4><p>上传到Github之前，需要把博客系统编译成html</p>
-<blockquote>
-<p>hexo generat</p>
-</blockquote>
-<h4 id="提交到Git仓库"><a href="#提交到Git仓库" class="headerlink" title="提交到Git仓库"></a>提交到Git仓库</h4><blockquote>
-<p>hexo deploy</p>
-</blockquote>
-<h4 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h4><p>在每次使用hexo generat部署之后，可以先使用 hexo serve 运行本地站点，然后在浏览器输入地址 <a href="http://lacolhost:4000/" target="_blank" rel="noopener">http://lacolhost:4000/</a> 查看运行结果，检查无误后再使用 hexo deploy 发布</p>
+</li>
+</ul>
+<h3 id="npm下载"><a href="#npm下载" class="headerlink" title="npm下载"></a>npm下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h3><h3 id="通过axios-post-发送一个数据"><a href="#通过axios-post-发送一个数据" class="headerlink" title="通过axios.post()发送一个数据"></a>通过axios.post()发送一个数据</h3><ul>
+<li>第一个参数填请求的地址</li>
+<li>第二个参数填请求头（对象的形式，也可以不写）</li>
+<li>第三个参数填要传的数据</li>
+<li>发送完请求会返回一个promise对象，可以通过.then()执行回调函数</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">"https://myapp-92091.firebaseio.com/user.json"</span>)</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">	.then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">	&#125;,(err)=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="get请求使用方式一样"><a href="#get请求使用方式一样" class="headerlink" title="get请求使用方式一样"></a>get请求使用方式一样</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://myapp-92091.firebaseio.com/user.json"</span>)</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">	.then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// 数据处理</span></span><br><span class="line">	&#125;,(err)=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Config-Defaults"><a href="#Config-Defaults" class="headerlink" title="Config Defaults"></a>Config Defaults</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.buseURL = <span class="string">"https://myapp-92091.firebaseio.com"</span></span><br><span class="line"><span class="comment">// 配置请求头（get，post，common）</span></span><br><span class="line">axios.defaults.header.common[<span class="string">"Authorization"</span>] = <span class="string">"AUTH_TOKEN"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Interceptors"><a href="#Interceptors" class="headerlink" title="Interceptors"></a>Interceptors</h3><ul>
+<li>可以在处理请求或响应之前拦截它们。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加一个发送数据前的拦截器</span></span><br><span class="line">axios.interceptors.request.use(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在发送请求处理数据，也可以加loading</span></span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">  &#125;, error =&gt; &#123;</span><br><span class="line">    <span class="comment">// 处理请求错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加一个请求数据回来的拦截器</span></span><br><span class="line">axios.interceptors.response.use(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 数据处理</span></span><br><span class="line">    <span class="keyword">return</span> response;</span><br><span class="line">  &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 处理响应错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>也可以创建一个新的axios实例</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span></span><br><span class="line"><span class="keyword">const</span> instance = axios.create()</span><br><span class="line">instance.defaults.baseURL = <span class="string">""</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> instance</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -386,9 +360,9 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
-  <p><span>最后更新:</span>2019年08月30日 - 22:08</p>
-  <p><span>原始链接:</span><a href="/2019/08/23/博客的搭建（一）/" title="博客的搭建（一）">http://yoursite.com/2019/08/23/博客的搭建（一）/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/08/23/博客的搭建（一）/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年09月02日 - 21:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/02/axios的基础使用/" title="axios的基础使用">http://yoursite.com/2019/09/02/axios的基础使用/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/02/axios的基础使用/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -417,7 +391,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i>  Hexo</a>
+              <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+            
+              <a href="/tags/axios/" rel="tag"><i class="fa fa-tag"></i> axios</a>
             
           </div>
         
@@ -427,15 +403,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/08/30/Vuex状态管理/" rel="next" title="Vuex状态管理">
+                  <i class="fa fa-chevron-left"></i> Vuex状态管理
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/28/Vue中From表单的使用/" rel="prev" title="Vue中From表单的使用">
-                  Vue中From表单的使用 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -485,7 +461,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、环境配置"><span class="nav-text">一、环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用npm安装Hexo"><span class="nav-text">使用npm安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建资源文件夹"><span class="nav-text">创建资源文件夹</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、基本使用"><span class="nav-text">二、基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地预览博客"><span class="nav-text">本地预览博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一篇新的博客"><span class="nav-text">创建一篇新的博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建主页"><span class="nav-text">创建主页</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、博客发布"><span class="nav-text">三、博客发布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件"><span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成Html文件"><span class="nav-text">生成Html文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交到Git仓库"><span class="nav-text">提交到Git仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建议："><span class="nav-text">建议：</span></a></li></ol></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm下载"><span class="nav-text">npm下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入axios"><span class="nav-text">引入axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础使用"><span class="nav-text">基础使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过axios-post-发送一个数据"><span class="nav-text">通过axios.post()发送一个数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get请求使用方式一样"><span class="nav-text">get请求使用方式一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Config-Defaults"><span class="nav-text">Config Defaults</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interceptors"><span class="nav-text">Interceptors</span></a></li></ol></div>
           </div>
         
       </div>
