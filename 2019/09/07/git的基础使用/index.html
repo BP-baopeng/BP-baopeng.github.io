@@ -56,16 +56,19 @@
   };
 </script>
 
-  <meta name="keywords" content="web,前端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http://yoursite.com/schedule/index.html">
+  <meta name="description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git的基础使用">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/git的基础使用/index.html">
 <meta property="og:site_name" content="鲍鹏的个人博客">
+<meta property="og:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T11:24:28.376Z">
+<meta property="og:updated_time" content="2019-09-07T02:02:36.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="schedule">
-  <link rel="canonical" href="http://yoursite.com/schedule/">
+<meta name="twitter:title" content="git的基础使用">
+<meta name="twitter:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
+  <link rel="canonical" href="http://yoursite.com/2019/09/07/git的基础使用/">
 
 
 <script id="page-configurations">
@@ -73,13 +76,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>schedule | 鲍鹏的个人博客</title>
+  <title>git的基础使用 | 鲍鹏的个人博客</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -214,65 +217,203 @@
         <div class="content-wrap">
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">schedule
-
-</h1>
-
-<div class="post-meta">
+  <article class="post" itemscope itemtype="http://schema.org/Article">
   
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/07/git的基础使用/">
 
-</div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲍鹏">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
 
-</header>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鲍鹏的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">git的基础使用
 
-      
-      
-      
-      <div class="post-body">
-        
           
-        
-      </div>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-07 09:40:00 / 修改时间：10:02:36" itemprop="dateCreated datePublished" datetime="2019-09-07T09:40:00+08:00">2019-09-07</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
+        <ul>
+<li>本文介绍了git的基础命令，以及工作过程中如何使用git<a id="more"></a>
+
+</li>
+</ul>
+<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><blockquote>
+<p>git config –global user.name <name><br>git config –global user.email <email></email></name></p>
+</blockquote>
+<h3 id="检查配置"><a href="#检查配置" class="headerlink" title="检查配置"></a>检查配置</h3><blockquote>
+<p>git config –list</p>
+</blockquote>
+<h3 id="获取Git仓库"><a href="#获取Git仓库" class="headerlink" title="获取Git仓库"></a>获取Git仓库</h3><ol>
+<li>目录初始化:  git init</li>
+<li>克隆现有仓库:  git clone <url></url></li>
+</ol>
+<h3 id="删除仓库内容"><a href="#删除仓库内容" class="headerlink" title="删除仓库内容"></a>删除仓库内容</h3><ol>
+<li>在本地仓库删除指定文件： git rm 文件名称</li>
+<li>在本地仓库删除指定文件： git rm -r 文件夹名称</li>
+<li>提交修改： git commit -m “”</li>
+<li>推送到远程仓库： git push</li>
+</ol>
+<p>三个工作区域：工作目录，暂存区域，Git仓库</p>
+<p>已快照的形式存储</p>
+<p>Git更新状态命令</p>
+<p>追踪文件与暂存已经修改文件  git add .<br>提交更新  git commit -m “第一次提交”<br>查看状态  git status<br>比较工作目录和暂存区域   git diff<br>比较暂存区域和上版本的区别 git diff –staged<br>比较工作目录和上版本的区别 git diff HEAD</p>
+<p>查看提交历史 git log</p>
+<p>Git撤销<br>撤销到暂存  git reser HEAD –<file><br>撤销暂存   git checkout –<file></file></file></p>
+<p>Git分支：指针<br>默认分支 master<br>创建分支 git branch <name></name></p>
+<p>HEAD 指针<br>切换分支 git checkout &lt;名字&gt;</p>
+<h3 id="工作中使用分支：不要在主分支上修改代码"><a href="#工作中使用分支：不要在主分支上修改代码" class="headerlink" title="工作中使用分支：不要在主分支上修改代码"></a>工作中使用分支：不要在主分支上修改代码</h3><p>合并分支（切换到主分支） git merge &lt;分支&gt;</p>
+<p>以本地仓库为基准</p>
+<ol>
+<li>创建一个新的仓库</li>
+<li>与git仓库创建连接：git remote add origin <url></url></li>
+<li>提交本地origin分支到远程master分支上：git push origin master</li>
+<li>提交简写(下次提交直接git push 就可以)： git push -u origin master</li>
+<li>查看所有版本：git branch -v</li>
+</ol>
+<p>以远程仓库为基准</p>
+<blockquote>
+<p>git clone url</p>
+</blockquote>
+<p>多人协作<br>拉取：git fetch <name><br>合并：git merge <branch><br>拉取加合并：git pull <name> <branch><br>推送：git push <name> <branch></branch></name></branch></name></branch></name></p>
+
+    </div>
+
+    
+    
+    
+
+    <div>
       
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    
+</div>
       
     </div>
-    
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
+  <p><span>最后更新:</span>2019年09月07日 - 10:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/07/git的基础使用/" title="git的基础使用">http://yoursite.com/2019/09/07/git的基础使用/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/07/git的基础使用/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
 
+      
+      </div>
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/02/axios的基础使用/" rel="next" title="axios的基础使用">
+                  <i class="fa fa-chevron-left"></i> axios的基础使用
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-    
-    
+  </div>
+  
+  
+  
+  </article>
+
   </div>
 
 
@@ -309,6 +450,10 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git配置"><span class="nav-text">Git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查配置"><span class="nav-text">检查配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取Git仓库"><span class="nav-text">获取Git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除仓库内容"><span class="nav-text">删除仓库内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作中使用分支：不要在主分支上修改代码"><span class="nav-text">工作中使用分支：不要在主分支上修改代码</span></a></li></ol></div>
+          </div>
+        
       </div>
       <!--/noindex-->
 
@@ -540,9 +685,8 @@
 
 
   
-    <script src="/js/post-details.js?v=7.3.0"></script>
+  <script src="/js/post-details.js?v=7.3.0"></script>
 
-  
 
 </body>
 </html>
