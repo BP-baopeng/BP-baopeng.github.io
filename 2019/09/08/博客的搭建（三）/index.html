@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="本文介绍了axios的基础使用">
-<meta name="keywords" content="Vue,axios">
+  <meta name="description" content="博客如何搭建以及常用的API，前两篇我已经介绍过了，关于主题的个性化配置网络上一搜一大堆文章，我就不细说了，本文主要记录了博主在搭建博客踩的坑以及解决方法。">
+<meta name="keywords" content=" Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="axios的基础使用">
-<meta property="og:url" content="http://yoursite.com/2019/09/02/axios的基础使用/index.html">
+<meta property="og:title" content="博客的搭建（三）">
+<meta property="og:url" content="http://yoursite.com/2019/09/08/博客的搭建（三）/index.html">
 <meta property="og:site_name" content="鲍鹏的个人博客">
-<meta property="og:description" content="本文介绍了axios的基础使用">
+<meta property="og:description" content="博客如何搭建以及常用的API，前两篇我已经介绍过了，关于主题的个性化配置网络上一搜一大堆文章，我就不细说了，本文主要记录了博主在搭建博客踩的坑以及解决方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-02T13:35:52.546Z">
+<meta property="og:updated_time" content="2019-09-08T02:36:22.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="axios的基础使用">
-<meta name="twitter:description" content="本文介绍了axios的基础使用">
-  <link rel="canonical" href="http://yoursite.com/2019/09/02/axios的基础使用/">
+<meta name="twitter:title" content="博客的搭建（三）">
+<meta name="twitter:description" content="博客如何搭建以及常用的API，前两篇我已经介绍过了，关于主题的个性化配置网络上一搜一大堆文章，我就不细说了，本文主要记录了博主在搭建博客踩的坑以及解决方法。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/08/博客的搭建（三）/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>axios的基础使用 | 鲍鹏的个人博客</title>
+  <title>博客的搭建（三） | 鲍鹏的个人博客</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/axios的基础使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/08/博客的搭建（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鲍鹏">
@@ -267,7 +267,7 @@
       <meta itemprop="name" content="鲍鹏的个人博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">axios的基础使用
+        <h1 class="post-title" itemprop="name headline">博客的搭建（三）
 
           
         </h1>
@@ -283,7 +283,7 @@
                 
               
 
-              <time title="创建时间：2019-09-02 21:25:45 / 修改时间：21:35:52" itemprop="dateCreated datePublished" datetime="2019-09-02T21:25:45+08:00">2019-09-02</time>
+              <time title="创建时间：2019-09-08 10:27:18 / 修改时间：10:36:22" itemprop="dateCreated datePublished" datetime="2019-09-08T10:27:18+08:00">2019-09-08</time>
             </span>
           
             
@@ -296,14 +296,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/vue基础/" itemprop="url" rel="index"><span itemprop="name">vue基础</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
 
                 
                 
@@ -330,37 +330,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li>本文介绍了axios的基础使用<a id="more"></a>
+        <p>博客如何搭建以及常用的API，前两篇我已经介绍过了，关于主题的个性化配置网络上一搜一大堆文章，我就不细说了，本文主要记录了博主在搭建博客踩的坑以及解决方法。</p>
+<a id="more"></a>
 
-</li>
-</ul>
-<h3 id="npm下载"><a href="#npm下载" class="headerlink" title="npm下载"></a>npm下载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save</span><br></pre></td></tr></table></figure>
+<h6 id="1-在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为hexo版本更新的原因）。"><a href="#1-在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为hexo版本更新的原因）。" class="headerlink" title="1. 在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为hexo版本更新的原因）。"></a>1. 在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为<code>hexo</code>版本更新的原因）。</h6><p><strong>解决办法:</strong><br>可以通过在主题样式的根目录里面添加CSS样式。<br>例如：我使用的是<code>next-Pisces</code>主题样式，可以直接在<code>hemes\next\source\css\_mixins\Pisces.styl</code>文件中直接添加CSS样式。</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加网页背景图片</span></span><br><span class="line"><span class="selector-tag">html</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">    background:url(https://source.unsplash.com/random/1600x900);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-attachment</span>:fixed;</span><br><span class="line">    <span class="attribute">background-position</span>:<span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background-size</span>:cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h3><h3 id="通过axios-post-发送一个数据"><a href="#通过axios-post-发送一个数据" class="headerlink" title="通过axios.post()发送一个数据"></a>通过axios.post()发送一个数据</h3><ul>
-<li>第一个参数填请求的地址</li>
-<li>第二个参数填请求头（对象的形式，也可以不写）</li>
-<li>第三个参数填要传的数据</li>
-<li>发送完请求会返回一个promise对象，可以通过.then()执行回调函数</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">"https://myapp-92091.firebaseio.com/user.json"</span>)</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">	.then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">	&#125;,(err)=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="get请求使用方式一样"><a href="#get请求使用方式一样" class="headerlink" title="get请求使用方式一样"></a>get请求使用方式一样</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">"https://myapp-92091.firebaseio.com/user.json"</span>)</span><br><span class="line">	<span class="comment">// 回调函数</span></span><br><span class="line">	.then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// 数据处理</span></span><br><span class="line">	&#125;,(err)=&gt;&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Config-Defaults"><a href="#Config-Defaults" class="headerlink" title="Config Defaults"></a>Config Defaults</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.buseURL = <span class="string">"https://myapp-92091.firebaseio.com"</span></span><br><span class="line"><span class="comment">// 配置请求头（get，post，common）</span></span><br><span class="line">axios.defaults.header.common[<span class="string">"Authorization"</span>] = <span class="string">"AUTH_TOKEN"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Interceptors"><a href="#Interceptors" class="headerlink" title="Interceptors"></a>Interceptors</h3><ul>
-<li>可以在处理请求或响应之前拦截它们。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加一个发送数据前的拦截器</span></span><br><span class="line">axios.interceptors.request.use(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在发送请求处理数据，也可以加loading</span></span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">  &#125;, error =&gt; &#123;</span><br><span class="line">    <span class="comment">// 处理请求错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加一个请求数据回来的拦截器</span></span><br><span class="line">axios.interceptors.response.use(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 数据处理</span></span><br><span class="line">    <span class="keyword">return</span> response;</span><br><span class="line">  &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 处理响应错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>也可以创建一个新的axios实例</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span></span><br><span class="line"><span class="keyword">const</span> instance = axios.create()</span><br><span class="line">instance.defaults.baseURL = <span class="string">""</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> instance</span><br></pre></td></tr></table></figure>
-
+<h6 id="2-通过hexo-serve进行本地预览，经常有些样式并没有生效，或者通过hexo-deploy上传之后再打开有些样式或者文章无法正常显示。"><a href="#2-通过hexo-serve进行本地预览，经常有些样式并没有生效，或者通过hexo-deploy上传之后再打开有些样式或者文章无法正常显示。" class="headerlink" title="2. 通过hexo serve进行本地预览，经常有些样式并没有生效，或者通过hexo deploy上传之后再打开有些样式或者文章无法正常显示。"></a>2. 通过<code>hexo serve</code>进行本地预览，经常有些样式并没有生效，或者通过<code>hexo deploy</code>上传之后再打开有些样式或者文章无法正常显示。</h6><p><strong>解决办法:</strong><br>可以通过<code>hexo clean</code>，清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
+<h6 id="3-当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错Plugin-load-failed或者no-such-file-or-directory，提醒我们需要重新通过npm下载插件。"><a href="#3-当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错Plugin-load-failed或者no-such-file-or-directory，提醒我们需要重新通过npm下载插件。" class="headerlink" title="3. 当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错Plugin load failed或者no such file or directory，提醒我们需要重新通过npm下载插件。"></a>3. 当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错<code>Plugin load failed</code>或者<code>no such file or directory</code>，提醒我们需要重新通过npm下载插件。</h6><p><strong>解决办法:</strong><br>因为国内使用npm下载插件是非常慢的，所以我们经常使用cnpm（淘宝镜像）进行下载，需要注意的是当你混用npm和cnpm的时候，本地cnpm下载的插件会被自动删除掉，所以会导致报错插件加载失败，（尽量不要混用）重新下载即可。</p>
+<h6 id="4-博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。"><a href="#4-博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。" class="headerlink" title="4. 博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。"></a>4. 博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。</h6><p><strong>解决办法:</strong><br>博主在搭建本地搜索框的时候，发现搜索框显示在文章主体后，调整<code>z-index</code>也无法正常显示，最后发现是因为我给主体设置了<code>opacity</code>属性。<code>opacity</code>属性默认会改变子元素的透明度，所以会导致页面层次混乱。<br>我们可以改用<code>background-color: rgba(255, 255, 255, 0.8)</code>改变透明度。</p>
 
     </div>
 
@@ -387,9 +365,9 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
-  <p><span>最后更新:</span>2019年09月02日 - 21:09</p>
-  <p><span>原始链接:</span><a href="/2019/09/02/axios的基础使用/" title="axios的基础使用">http://yoursite.com/2019/09/02/axios的基础使用/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/02/axios的基础使用/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年09月08日 - 10:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/08/博客的搭建（三）/" title="博客的搭建（三）">http://yoursite.com/2019/09/08/博客的搭建（三）/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/08/博客的搭建（三）/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -418,9 +396,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
-            
-              <a href="/tags/axios/" rel="tag"><i class="fa fa-tag"></i> axios</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i>  Hexo</a>
             
           </div>
         
@@ -430,8 +406,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/30/Vuex状态管理/" rel="next" title="Vuex状态管理">
-                  <i class="fa fa-chevron-left"></i> Vuex状态管理
+                <a href="/2019/09/08/博客的搭建（二）/" rel="next" title="博客的搭建（二）">
+                  <i class="fa fa-chevron-left"></i> 博客的搭建（二）
                 </a>
               
             </div>
@@ -439,10 +415,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/07/git的基础使用/" rel="prev" title="git的基础使用">
-                  git的基础使用 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -492,7 +464,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm下载"><span class="nav-text">npm下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入axios"><span class="nav-text">引入axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础使用"><span class="nav-text">基础使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过axios-post-发送一个数据"><span class="nav-text">通过axios.post()发送一个数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get请求使用方式一样"><span class="nav-text">get请求使用方式一样</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Config-Defaults"><span class="nav-text">Config Defaults</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interceptors"><span class="nav-text">Interceptors</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为hexo版本更新的原因）。"><span class="nav-text">1. 在主题个性化配置的时候，网络上有很多修改CSS样式的文章，文章里经常把要更改的样式写在某一个具体的文件内，有一些文件本地根本找不到（可能是因为hexo版本更新的原因）。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-通过hexo-serve进行本地预览，经常有些样式并没有生效，或者通过hexo-deploy上传之后再打开有些样式或者文章无法正常显示。"><span class="nav-text">2. 通过hexo serve进行本地预览，经常有些样式并没有生效，或者通过hexo deploy上传之后再打开有些样式或者文章无法正常显示。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错Plugin-load-failed或者no-such-file-or-directory，提醒我们需要重新通过npm下载插件。"><span class="nav-text">3. 当通过npm安装了一些插件之后，再进行博客本地预览，hexo报错Plugin load failed或者no such file or directory，提醒我们需要重新通过npm下载插件。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。"><span class="nav-text">4. 博客添加本地搜索插件之后，页面层次混乱，搜索框无法正常显示。</span></a></li></ol></div>
           </div>
         
       </div>
