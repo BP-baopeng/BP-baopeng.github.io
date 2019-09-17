@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
-<meta name="keywords" content="git">
+  <meta name="description" content="什么是Ajax AJAX = 异步 JavaScript 和 XML。 AJAX 是一种用于创建快速动态网页的技术。 通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
+<meta name="keywords" content=" ajax">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git的基础使用">
-<meta property="og:url" content="http://yoursite.com/2019/09/07/git的基础使用/index.html">
+<meta property="og:title" content="手动封装ajax请求兼容性写法">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/手动封装ajax请求兼容性写法/index.html">
 <meta property="og:site_name" content="鲍鹏的个人博客">
-<meta property="og:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
+<meta property="og:description" content="什么是Ajax AJAX = 异步 JavaScript 和 XML。 AJAX 是一种用于创建快速动态网页的技术。 通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T02:12:01.349Z">
+<meta property="og:updated_time" content="2019-09-17T14:05:59.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git的基础使用">
-<meta name="twitter:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
-  <link rel="canonical" href="http://yoursite.com/2019/09/07/git的基础使用/">
+<meta name="twitter:title" content="手动封装ajax请求兼容性写法">
+<meta name="twitter:description" content="什么是Ajax AJAX = 异步 JavaScript 和 XML。 AJAX 是一种用于创建快速动态网页的技术。 通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/17/手动封装ajax请求兼容性写法/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>git的基础使用 | 鲍鹏的个人博客</title>
+  <title>手动封装ajax请求兼容性写法 | 鲍鹏的个人博客</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/07/git的基础使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/手动封装ajax请求兼容性写法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鲍鹏">
@@ -267,7 +267,7 @@
       <meta itemprop="name" content="鲍鹏的个人博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">git的基础使用
+        <h1 class="post-title" itemprop="name headline">手动封装ajax请求兼容性写法
 
           
         </h1>
@@ -283,7 +283,7 @@
                 
               
 
-              <time title="创建时间：2019-09-07 09:40:00 / 修改时间：10:12:01" itemprop="dateCreated datePublished" datetime="2019-09-07T09:40:00+08:00">2019-09-07</time>
+              <time title="创建时间：2019-09-17 22:01:32 / 修改时间：22:05:59" itemprop="dateCreated datePublished" datetime="2019-09-17T22:01:32+08:00">2019-09-17</time>
             </span>
           
             
@@ -296,14 +296,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/网络/" itemprop="url" rel="index"><span itemprop="name">网络</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/git基础使用/" itemprop="url" rel="index"><span itemprop="name">git基础使用</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/网络/ajax/" itemprop="url" rel="index"><span itemprop="name">ajax</span></a></span>
 
                 
                 
@@ -330,50 +330,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li>本文介绍了git的基础命令，以及工作过程中如何使用git<a id="more"></a>
+        <h2 id="什么是Ajax"><a href="#什么是Ajax" class="headerlink" title="什么是Ajax"></a>什么是Ajax</h2><ul>
+<li>AJAX = 异步 JavaScript 和 XML。</li>
+<li>AJAX 是一种用于创建快速动态网页的技术。</li>
+<li>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。<a id="more"></a>
 
 </li>
 </ul>
-<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><blockquote>
-<p>git config –global user.name <name><br>git config –global user.email <email></email></name></p>
-</blockquote>
-<h3 id="检查配置"><a href="#检查配置" class="headerlink" title="检查配置"></a>检查配置</h3><blockquote>
-<p>git config –list</p>
-</blockquote>
-<h3 id="获取Git仓库"><a href="#获取Git仓库" class="headerlink" title="获取Git仓库"></a>获取Git仓库</h3><ol>
-<li>目录初始化:  git init</li>
-<li>克隆现有仓库:  git clone <url></url></li>
-</ol>
-<h3 id="删除仓库内容"><a href="#删除仓库内容" class="headerlink" title="删除仓库内容"></a>删除仓库内容</h3><ol>
-<li>在本地仓库删除指定文件： git rm 文件名称</li>
-<li>在本地仓库删除指定文件： git rm -r 文件夹名称</li>
-<li>提交修改： git commit -m “”</li>
-<li>推送到远程仓库： git push</li>
-</ol>
-<p>三个工作区域：工作目录，暂存区域，Git仓库</p>
-<p>已快照的形式存储</p>
-<p>Git更新状态命令</p>
-<p>追踪文件与暂存已经修改文件  git add .<br>提交更新  git commit -m “第一次提交”<br>查看状态  git status<br>比较工作目录和暂存区域   git diff<br>比较暂存区域和上版本的区别 git diff –staged<br>比较工作目录和上版本的区别 git diff HEAD</p>
-<p>查看提交历史 git log</p>
-<p>Git撤销<br>撤销到暂存  git reser HEAD –<file><br>撤销暂存   git checkout –<file></file></file></p>
-<p>Git分支：指针<br>默认分支 master<br>创建分支 git branch <name></name></p>
-<p>HEAD 指针<br>切换分支 git checkout &lt;名字&gt;</p>
-<h3 id="工作中使用分支：不要在主分支上修改代码"><a href="#工作中使用分支：不要在主分支上修改代码" class="headerlink" title="工作中使用分支：不要在主分支上修改代码"></a>工作中使用分支：不要在主分支上修改代码</h3><p>合并分支（切换到主分支） git merge &lt;分支&gt;</p>
-<p>以本地仓库为基准</p>
-<ol>
-<li>创建一个新的仓库</li>
-<li>与git仓库创建连接：git remote add origin <url></url></li>
-<li>提交本地origin分支到远程master分支上：git push origin master</li>
-<li>提交简写(下次提交直接git push 就可以)： git push -u origin master</li>
-<li>查看所有版本：git branch -v</li>
-</ol>
-<p>以远程仓库为基准</p>
-<blockquote>
-<p>git clone url</p>
-</blockquote>
-<p>多人协作<br>拉取：git fetch <name><br>合并：git merge <branch><br>拉取加合并：git pull <name> <branch><br>推送：git push <name> <branch></branch></name></branch></name></branch></name></p>
+<h2 id="如何封装"><a href="#如何封装" class="headerlink" title="如何封装"></a>如何封装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化HTTP请求参数（请求方式，地址，回调函数，请求数据，同步异步）</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">method, url, callback, data, flag</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xml = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 兼容性写法</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpReauest)&#123;</span><br><span class="line">        <span class="comment">// 创建ajax对象（试用火狐谷歌IE7及以上）</span></span><br><span class="line">        xml = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// 兼容IE6及以下</span></span><br><span class="line">        xml = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHttp"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将请求方式转换成大写</span></span><br><span class="line">    method = method.toUpperCase();</span><br><span class="line">    <span class="comment">// 判断请求方式</span></span><br><span class="line">    <span class="keyword">if</span>(method == <span class="string">"GET"</span>)&#123;</span><br><span class="line">        <span class="comment">//定义一个时间戳，避免每次请求地址一样</span></span><br><span class="line">        <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        timer = date.getTime();</span><br><span class="line">        <span class="comment">// 初始化HTTP请求参数(请求方式,地址+参数,同步异步)</span></span><br><span class="line">        xml.open(method, url + <span class="string">"?"</span> + data+ <span class="string">"$timer="</span> + timer, flag);</span><br><span class="line">        xml.send();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(method == <span class="string">"POST"</span>)&#123;</span><br><span class="line">        xml.open(method, url, flag);</span><br><span class="line">        <span class="comment">// post传值需要规定请求头（设置内容类型）</span></span><br><span class="line">        xml.setRequestHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line">        xml.send(data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 监听数据</span></span><br><span class="line">    xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(xml.readyState);</span><br><span class="line">        <span class="comment">//readyState的五种状态</span></span><br><span class="line">        <span class="comment">// 0 - （未初始化）还没有调用send()方法</span></span><br><span class="line">        <span class="comment">// 1 - （载入）已调用send()方法，正在发送请求</span></span><br><span class="line">        <span class="comment">// 2 - （载入完成）send()方法执行完成，已经接收到全部响应内容</span></span><br><span class="line">        <span class="comment">// 3 - （交互）正在解析响应内容</span></span><br><span class="line">        <span class="comment">// 4 - （完成）响应内容解析完成，可以在客户端调用了</span></span><br><span class="line">        <span class="keyword">if</span>(xml.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//检查数据Http状态码：</span></span><br><span class="line">            <span class="comment">//100:信息类，表示web浏览器请求，正在进一步处理中</span></span><br><span class="line">            <span class="comment">//200:成功，表示用户请求被正确接收正在进步一的处理中</span></span><br><span class="line">            <span class="comment">//300:表示请求没有成功，客户端必须采取进一步的操作</span></span><br><span class="line">            <span class="comment">//400:客户端错误，表示客户端提交的请求有错误，如404</span></span><br><span class="line">            <span class="comment">//500:服务器错误，表示服务器不能完成对请求的处理</span></span><br><span class="line">            <span class="comment">//若是为200时，说明数据成功，调用回调函数处理数据，可以通过其他状态码拓展失败的回调函数</span></span><br><span class="line">            <span class="keyword">if</span>(xml.status == <span class="number">200</span>)&#123;</span><br><span class="line">                <span class="comment">// 将请求到的内容作为参数传给回调函数并执行</span></span><br><span class="line">                callback(xml.responseText);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="使用封装的Ajax"><a href="#使用封装的Ajax" class="headerlink" title="使用封装的Ajax"></a>使用封装的Ajax</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 先引入封装好的Ajax文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./ajax.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> cpage = <span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">   <span class="comment">//通过GET调用ajax方法</span></span></span><br><span class="line"><span class="javascript">   <span class="comment">//请求方式、路径、回调函数、传值、是否异步</span></span></span><br><span class="line"><span class="javascript">   ajax(<span class="string">'GET'</span>, <span class="string">'getPics.php'</span>, dealData, <span class="string">"cpage="</span> + cpage, <span class="literal">true</span>);</span></span><br><span class="line"><span class="javascript">   <span class="comment">//定义一个回调函数</span></span></span><br><span class="line"><span class="javascript">   <span class="function"><span class="keyword">function</span> <span class="title">callBack</span>(<span class="params">data</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">       <span class="comment">//将获取到的json格式字符串转换成json格式</span></span></span><br><span class="line"><span class="javascript">       <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(data);</span></span><br><span class="line"><span class="javascript">       <span class="built_in">console</span>.log(data);</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>需要注意的是，<code>ajax</code>接收到的值是<code>JSON</code>格式的字符串，需要转换成 <code>JSON</code> 格式才可以当对象来使用</li>
+</ul>
+<h2 id="JSON格式转换"><a href="#JSON格式转换" class="headerlink" title="JSON格式转换"></a>JSON格式转换</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123;<span class="string">"name"</span>: <span class="string">"小明"</span>,<span class="string">"age"</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="comment">// 将json格式转换成字符串</span></span><br><span class="line"><span class="keyword">var</span> strData = <span class="built_in">JSON</span>.stringify(data);</span><br><span class="line"><span class="comment">// 得到："&#123;"name": "小明","age": 18&#125;"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 将strData转换成json</span></span><br><span class="line"><span class="keyword">var</span> jsonData = <span class="built_in">JSON</span>.parse(strData);</span><br><span class="line"><span class="comment">// 得到：&#123;name: "小明", age: 18&#125;</span></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -399,9 +370,9 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
-  <p><span>最后更新:</span>2019年09月07日 - 10:09</p>
-  <p><span>原始链接:</span><a href="/2019/09/07/git的基础使用/" title="git的基础使用">http://yoursite.com/2019/09/07/git的基础使用/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/07/git的基础使用/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年09月17日 - 22:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/17/手动封装ajax请求兼容性写法/" title="手动封装ajax请求兼容性写法">http://yoursite.com/2019/09/17/手动封装ajax请求兼容性写法/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/17/手动封装ajax请求兼容性写法/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -430,7 +401,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+              <a href="/tags/ajax/" rel="tag"><i class="fa fa-tag"></i>  ajax</a>
             
           </div>
         
@@ -440,8 +411,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/02/axios的基础使用/" rel="next" title="axios的基础使用">
-                  <i class="fa fa-chevron-left"></i> axios的基础使用
+                <a href="/2019/09/09/闭包/" rel="next" title="闭包">
+                  <i class="fa fa-chevron-left"></i> 闭包
                 </a>
               
             </div>
@@ -449,10 +420,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/07/Set数据结构/" rel="prev" title="Set数据结构">
-                  Set数据结构 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -502,7 +469,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git配置"><span class="nav-text">Git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查配置"><span class="nav-text">检查配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取Git仓库"><span class="nav-text">获取Git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除仓库内容"><span class="nav-text">删除仓库内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作中使用分支：不要在主分支上修改代码"><span class="nav-text">工作中使用分支：不要在主分支上修改代码</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Ajax"><span class="nav-text">什么是Ajax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何封装"><span class="nav-text">如何封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用封装的Ajax"><span class="nav-text">使用封装的Ajax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON格式转换"><span class="nav-text">JSON格式转换</span></a></li></ol></div>
           </div>
         
       </div>
