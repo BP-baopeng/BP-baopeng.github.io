@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
-<meta name="keywords" content="git">
+  <meta name="description" content="call、apply、bind方法都是把函数临时赋值到对象上并执行（改变this指向）。">
+<meta name="keywords" content=" JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git的基础使用">
-<meta property="og:url" content="http://yoursite.com/2019/09/07/git的基础使用/index.html">
+<meta property="og:title" content="Javascript中call、apply、bind的用法">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/Javascript中call、apply、bind的用法/index.html">
 <meta property="og:site_name" content="鲍鹏的个人博客">
-<meta property="og:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
+<meta property="og:description" content="call、apply、bind方法都是把函数临时赋值到对象上并执行（改变this指向）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-07T02:12:01.349Z">
+<meta property="og:updated_time" content="2019-09-18T14:41:43.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git的基础使用">
-<meta name="twitter:description" content="本文介绍了git的基础命令，以及工作过程中如何使用git">
-  <link rel="canonical" href="http://yoursite.com/2019/09/07/git的基础使用/">
+<meta name="twitter:title" content="Javascript中call、apply、bind的用法">
+<meta name="twitter:description" content="call、apply、bind方法都是把函数临时赋值到对象上并执行（改变this指向）。">
+  <link rel="canonical" href="http://yoursite.com/2019/09/18/Javascript中call、apply、bind的用法/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>git的基础使用 | 鲍鹏的个人博客</title>
+  <title>Javascript中call、apply、bind的用法 | 鲍鹏的个人博客</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/07/git的基础使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/Javascript中call、apply、bind的用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="鲍鹏">
@@ -267,7 +267,7 @@
       <meta itemprop="name" content="鲍鹏的个人博客">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">git的基础使用
+        <h1 class="post-title" itemprop="name headline">Javascript中call、apply、bind的用法
 
           
         </h1>
@@ -283,7 +283,7 @@
                 
               
 
-              <time title="创建时间：2019-09-07 09:40:00 / 修改时间：10:12:01" itemprop="dateCreated datePublished" datetime="2019-09-07T09:40:00+08:00">2019-09-07</time>
+              <time title="创建时间：2019-09-18 22:34:19 / 修改时间：22:41:43" itemprop="dateCreated datePublished" datetime="2019-09-18T22:34:19+08:00">2019-09-18</time>
             </span>
           
             
@@ -296,14 +296,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/git/git基础使用/" itemprop="url" rel="index"><span itemprop="name">git基础使用</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/基础语法/" itemprop="url" rel="index"><span itemprop="name">基础语法</span></a></span>
 
                 
                 
@@ -330,50 +330,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li>本文介绍了git的基础命令，以及工作过程中如何使用git<a id="more"></a>
+        <p>call、apply、bind方法都是把函数临时赋值到对象上并执行（改变this指向）。</p>
+<a id="more"></a>
 
-</li>
-</ul>
-<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><blockquote>
-<p>git config –global user.name <name><br>git config –global user.email <email></email></name></p>
-</blockquote>
-<h3 id="检查配置"><a href="#检查配置" class="headerlink" title="检查配置"></a>检查配置</h3><blockquote>
-<p>git config –list</p>
-</blockquote>
-<h3 id="获取Git仓库"><a href="#获取Git仓库" class="headerlink" title="获取Git仓库"></a>获取Git仓库</h3><ol>
-<li>目录初始化:  git init</li>
-<li>克隆现有仓库:  git clone <url></url></li>
-</ol>
-<h3 id="删除仓库内容"><a href="#删除仓库内容" class="headerlink" title="删除仓库内容"></a>删除仓库内容</h3><ol>
-<li>在本地仓库删除指定文件： git rm 文件名称</li>
-<li>在本地仓库删除指定文件： git rm -r 文件夹名称</li>
-<li>提交修改： git commit -m “”</li>
-<li>推送到远程仓库： git push</li>
-</ol>
-<p>三个工作区域：工作目录，暂存区域，Git仓库</p>
-<p>已快照的形式存储</p>
-<p>Git更新状态命令</p>
-<p>追踪文件与暂存已经修改文件  git add .<br>提交更新  git commit -m “第一次提交”<br>查看状态  git status<br>比较工作目录和暂存区域   git diff<br>比较暂存区域和上版本的区别 git diff –staged<br>比较工作目录和上版本的区别 git diff HEAD</p>
-<p>查看提交历史 git log</p>
-<p>Git撤销<br>撤销到暂存  git reser HEAD –<file><br>撤销暂存   git checkout –<file></file></file></p>
-<p>Git分支：指针<br>默认分支 master<br>创建分支 git branch <name></name></p>
-<p>HEAD 指针<br>切换分支 git checkout &lt;名字&gt;</p>
-<h3 id="工作中使用分支：不要在主分支上修改代码"><a href="#工作中使用分支：不要在主分支上修改代码" class="headerlink" title="工作中使用分支：不要在主分支上修改代码"></a>工作中使用分支：不要在主分支上修改代码</h3><p>合并分支（切换到主分支） git merge &lt;分支&gt;</p>
-<p>以本地仓库为基准</p>
-<ol>
-<li>创建一个新的仓库</li>
-<li>与git仓库创建连接：git remote add origin <url></url></li>
-<li>提交本地origin分支到远程master分支上：git push origin master</li>
-<li>提交简写(下次提交直接git push 就可以)： git push -u origin master</li>
-<li>查看所有版本：git branch -v</li>
-</ol>
-<p>以远程仓库为基准</p>
-<blockquote>
-<p>git clone url</p>
-</blockquote>
-<p>多人协作<br>拉取：git fetch <name><br>合并：git merge <branch><br>拉取加合并：git pull <name> <branch><br>推送：git push <name> <branch></branch></name></branch></name></branch></name></p>
+<p>先看明白下面：<br>例一：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"小王"</span>， age = <span class="number">17</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">"小张"</span>，</span><br><span class="line">    objAge: <span class="keyword">this</span>.age;</span><br><span class="line">    myFun: <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">"年龄"</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.objAge; <span class="comment">// 17</span></span><br><span class="line">obj.myFun(); <span class="comment">// 小张年龄 undefined</span></span><br></pre></td></tr></table></figure>
 
+<p>例二：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fav = <span class="string">"盲僧"</span>；</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shows</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.fav);</span><br><span class="line">&#125;</span><br><span class="line">shows(); <span class="comment">// 盲僧</span></span><br></pre></td></tr></table></figure>
+
+<p>上述两个例子的this，第一个打印里面的this指向obj，第二个全局声明的shows()函数this是windows。</p>
+<h2 id="call-、apply-、bind-都是用来重定义-this-这个对象的！"><a href="#call-、apply-、bind-都是用来重定义-this-这个对象的！" class="headerlink" title="call()、apply()、bind() 都是用来重定义 this 这个对象的！"></a>call()、apply()、bind() 都是用来重定义 this 这个对象的！</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"小王"</span>， age = <span class="number">17</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">"小张"</span>，</span><br><span class="line">    objAge: <span class="keyword">this</span>.age，</span><br><span class="line">    myFun: <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">"年龄"</span> + <span class="keyword">this</span>.age);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> db = &#123;</span><br><span class="line">    name: <span class="string">"德玛"</span>，</span><br><span class="line">    age: <span class="number">99</span></span><br><span class="line">&#125;</span><br><span class="line">obj.myFun.call(db); <span class="comment">//德玛年龄 99</span></span><br><span class="line">obj.myFun.apply(db); <span class="comment">//德玛年龄 99</span></span><br><span class="line">obj.muFun.bind(db)(); <span class="comment">//德玛年龄 99</span></span><br></pre></td></tr></table></figure>
+
+<p>以上出了 bind 方法后面多了个 () 外 ，结果返回都一致！</p>
+<p><strong>由此得出结论，bind 返回的是一个新的函数，你必须调用它才会被执行。</strong></p>
+<h2 id="对比call、bind、apply传参情况"><a href="#对比call、bind、apply传参情况" class="headerlink" title="对比call、bind、apply传参情况"></a>对比call、bind、apply传参情况</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">"小王"</span>， age = <span class="number">17</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name: <span class="string">"小张"</span>，</span><br><span class="line">    objAge: <span class="keyword">this</span>.age，</span><br><span class="line">    myFun: <span class="function"><span class="keyword">function</span> (<span class="params">from， to</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">`</span></span><br><span class="line"><span class="string">            <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>年龄: <span class="subst">$&#123;<span class="keyword">this</span>.age&#125;</span> 来自<span class="subst">$&#123;<span class="keyword">from</span>&#125;</span>去往<span class="subst">$&#123;to&#125;</span></span></span><br><span class="line"><span class="string">        `</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> db = &#123;</span><br><span class="line">    name: <span class="string">"德玛"</span>，</span><br><span class="line">    age: <span class="number">99</span></span><br><span class="line">&#125;</span><br><span class="line">obj.myFun.call(db,<span class="string">'成都'</span>,<span class="string">'上海'</span>)； </span><br><span class="line"><span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br><span class="line">obj.myFun.apply(db,[<span class="string">'成都'</span>,<span class="string">'上海'</span>])； </span><br><span class="line"><span class="comment">// 德玛 年龄 99  来自 成都去往上海  </span></span><br><span class="line">obj.myFun.bind(db,<span class="string">'成都'</span>,<span class="string">'上海'</span>)()； </span><br><span class="line"><span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br><span class="line">obj.myFun.bind(db,[<span class="string">'成都'</span>,<span class="string">'上海'</span>])()；</span><br><span class="line"><span class="comment">// 德玛 年龄 99  来自 成都, 上海去往 undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>从上面四个结果不难看出:</p>
+<p>call 、bind 、 apply 这三个函数的第一个参数都是 this 的指向对象，第二个参数差别就来了：</p>
+<p>call 的参数是直接放进去的，第二第三第 n 个参数全都用逗号分隔，直接放到后面 <code>obj.myFun.call(db,&#39;成都&#39;, ... ,&#39;string&#39; )</code>。</p>
+<p>apply 的所有参数都必须放在一个数组里面传进去 <code>obj.myFun.apply(db,[&#39;成都&#39;, ..., &#39;string&#39; ])</code>。</p>
+<p>bind 除了返回是函数以外，它 的参数和 call 一样。</p>
+<p>当然，三者的参数不限定是 string 类型，允许是各种类型，包括函数 、 object 等等！</p>
+<pre><code>原文地址：https://www.cnblogs.com/Shd-Study/p/6560808.html</code></pre>
     </div>
 
     
@@ -399,9 +378,9 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
-  <p><span>最后更新:</span>2019年09月07日 - 10:09</p>
-  <p><span>原始链接:</span><a href="/2019/09/07/git的基础使用/" title="git的基础使用">http://yoursite.com/2019/09/07/git的基础使用/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/07/git的基础使用/"  aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年09月18日 - 22:09</p>
+  <p><span>原始链接:</span><a href="/2019/09/18/Javascript中call、apply、bind的用法/" title="Javascript中call、apply、bind的用法">http://yoursite.com/2019/09/18/Javascript中call、apply、bind的用法/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/09/18/Javascript中call、apply、bind的用法/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -430,7 +409,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+              <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i>  JavaScript</a>
             
           </div>
         
@@ -440,8 +419,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/02/axios的基础使用/" rel="next" title="axios的基础使用">
-                  <i class="fa fa-chevron-left"></i> axios的基础使用
+                <a href="/2019/09/17/手动封装ajax请求兼容性写法/" rel="next" title="手动封装ajax请求兼容性写法">
+                  <i class="fa fa-chevron-left"></i> 手动封装ajax请求兼容性写法
                 </a>
               
             </div>
@@ -449,10 +428,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/07/Set数据结构/" rel="prev" title="Set数据结构">
-                  Set数据结构 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -502,7 +477,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git配置"><span class="nav-text">Git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查配置"><span class="nav-text">检查配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取Git仓库"><span class="nav-text">获取Git仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除仓库内容"><span class="nav-text">删除仓库内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作中使用分支：不要在主分支上修改代码"><span class="nav-text">工作中使用分支：不要在主分支上修改代码</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#call-、apply-、bind-都是用来重定义-this-这个对象的！"><span class="nav-text">call()、apply()、bind() 都是用来重定义 this 这个对象的！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对比call、bind、apply传参情况"><span class="nav-text">对比call、bind、apply传参情况</span></a></li></ol></div>
           </div>
         
       </div>
