@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2">
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","width":240,"display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="本文整理了一些基础的知识点以及面试经常问到的问题。（持续更新）">
+<meta name="keywords" content=" 面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试题">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/前端面试题/index.html">
+<meta property="og:site_name" content="鲍鹏的个人博客">
+<meta property="og:description" content="本文整理了一些基础的知识点以及面试经常问到的问题。（持续更新）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-28T12:39:24.893Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端面试题">
+<meta name="twitter:description" content="本文整理了一些基础的知识点以及面试经常问到的问题。（持续更新）">
+  <link rel="canonical" href="http://yoursite.com/2019/10/28/前端面试题/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>前端面试题 | 鲍鹏的个人博客</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">鲍鹏的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">爱编程，爱生活</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-wrapper">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/前端面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鲍鹏">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鲍鹏的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">前端面试题
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-28 20:31:37 / 修改时间：20:39:24" itemprop="dateCreated datePublished" datetime="2019-10-28T20:31:37+08:00">2019-10-28</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/面试题/" itemprop="url" rel="index"><span itemprop="name">面试题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文整理了一些基础的知识点以及面试经常问到的问题。（持续更新）</p>
+<a id="more"></a>
+
+<h2 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML"></a>一、HTML</h2><h3 id="1-HTML5增加了哪些新特征？"><a href="#1-HTML5增加了哪些新特征？" class="headerlink" title="1. HTML5增加了哪些新特征？"></a>1. <code>HTML5</code>增加了哪些新特征？</h3><ul>
+<li>新的结构元素（头部<code>header</code>、导航<code>nav</code>、主要内容<code>main</code>、底部<code>footer</code>、页面中一个内容区域<code>section</code>、与主区域内容没有关联的内容<code>aside</code>、独立的流内容<code>figure</code>）</li>
+<li>新的功能元素（视频<code>video</code>、音频<code>audio</code>、资源<code>source</code>、画布<code>canvas</code>、任务进度<code>progress</code>）</li>
+<li><code>input</code>新增的<code>type</code>类型（输入电话<code>tel</code>、滑动条<code>range</code>、包含数值的输入域<code>number</code>、邮箱<code>email</code>、选择日期<code>date</code>、选择月份<code>month</code>、选择周和年<code>week</code>、选择时间<code>time</code>、选取颜色<code>color</code>）</li>
+<li>拖放（<code>Drag</code>和<code>Drop</code>）</li>
+<li>文件操作</li>
+<li>本地离线存储<code>localStorage</code>长期存储数据，浏览器关闭后数据不丢失</li>
+<li><code>sessionStorage</code>的数据在浏览器关闭后自动删除</li>
+<li>新的技术（多线程处理<code>webWorker</code>、双向通信<code>websocket</code>、地理定位<code>Geolocation</code>）</li>
+</ul>
+<h3 id="2-lt-img-gt-的title和alt有什么区别？"><a href="#2-lt-img-gt-的title和alt有什么区别？" class="headerlink" title="2. &lt;img&gt;的title和alt有什么区别？"></a>2. <code>&lt;img&gt;</code>的<code>title</code>和<code>alt</code>有什么区别？</h3><p><code>title</code>通常当鼠标滑动到元素上的时候显示。</p>
+<p><code>alt</code>是<code>&lt;img&gt;</code>的特有属性，是图片内容的等价描述，用于图片无法加载时显示、读屏器阅读图片。可提图片高可访问性，除了纯装饰图片外都必须设置有意义的值，搜索引擎会重点分析。</p>
+<h3 id="3-iframe有哪些缺点？"><a href="#3-iframe有哪些缺点？" class="headerlink" title="3. iframe有哪些缺点？"></a>3. iframe有哪些缺点？</h3><p><code>iframe</code>会阻塞主页面的<code>onload</code>事件，搜索引擎的检索程序无法读取这种页面，不利于<code>SEO</code>。</p>
+<p><code>iframe</code>和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</p>
+<p>建议：通过<code>javascript</code>动态给<code>iframe</code>添加<code>src</code>属性值。</p>
+<h3 id="4-HTML全局属性（global-attribute）有哪些？"><a href="#4-HTML全局属性（global-attribute）有哪些？" class="headerlink" title="4. HTML全局属性（global attribute）有哪些？"></a>4. HTML全局属性（global attribute）有哪些？</h3><ul>
+<li><code>id</code>：元素<code>id</code>，文档内唯一。</li>
+<li><code>class</code>：为元素设置类标识。</li>
+<li><code>data-*</code>：为元素增加自定义属性。</li>
+<li><code>draggable</code>：设置元素是否可拖拽。</li>
+<li><code>lang</code>：元素内容的语言。</li>
+<li><code>style</code>：行内<code>css</code>样式。</li>
+<li><code>title</code>：元素相关的建议信息（鼠标悬停显示）。</li>
+</ul>
+<h2 id="二、CSS"><a href="#二、CSS" class="headerlink" title="二、CSS"></a>二、CSS</h2><h3 id="1-CSS3增加了哪些新特征？"><a href="#1-CSS3增加了哪些新特征？" class="headerlink" title="1. CSS3增加了哪些新特征？"></a>1. <code>CSS3</code>增加了哪些新特征？</h3><ul>
+<li>新增各种<code>css</code>选择器</li>
+<li>圆角<code>border-radius</code></li>
+<li>阴影<code>box-shadow</code></li>
+<li>文本效果（<code>text-shadow</code>、<code>text-overflow</code>、<code>word-wrap</code>、<code>word-break</code>）</li>
+<li>字体（<code>@font-face</code>）</li>
+<li>框大小（<code>box-sizing</code>）</li>
+<li><code>rgba</code></li>
+<li>线性渐变<code>linear-gradient</code>、径向渐变<code>radial-gradient</code></li>
+<li>新增了四种背景属性（<code>background-image</code>、<code>background-size</code>、<code>background-origin</code>、<code>background-clip</code>）</li>
+<li>多列布局（<code>columns</code>）</li>
+<li>弹性盒子（<code>Flex</code>）</li>
+<li>媒体查询（<code>@media</code>）</li>
+<li>2D、3D（形状变化<code>transform</code>、过渡<code>transition</code>）</li>
+</ul>
+<h3 id="2-让一个元素水平和垂直居中有哪些方法？"><a href="#2-让一个元素水平和垂直居中有哪些方法？" class="headerlink" title="2. 让一个元素水平和垂直居中有哪些方法？"></a>2. 让一个元素水平和垂直居中有哪些方法？</h3><p>   <strong>水平居中</strong></p>
+<ul>
+<li><p>元素为行内元素，设置父元素<code>text-align:center</code></p>
+</li>
+<li><p>如果元素宽度固定，可以设置左右<code>margin</code>为<code>auto</code></p>
+</li>
+<li><p>如果元素为绝对定位，设置父元素<code>position</code>为<code>relative</code>，元素设置<code>left:0;right:0;margin:auto;</code></p>
+</li>
+<li><p>使用<code>flex-box</code>布局，指定<code>justify-content</code>属性为<code>center</code></p>
+</li>
+<li><p><code>display</code>设置为<code>tabel-ceil</code></p>
+</li>
+<li><p><em>垂直居中*</em></p>
+</li>
+<li><p>将显示方式设置为表格，<code>display:table-cell</code>，同时设置<code>vertial-align:middle</code></p>
+</li>
+<li><p>使用<code>flex</code>布局，设置<code>align-item:center</code></p>
+</li>
+<li><p>绝对定位中设置<code>bottom:0;top:0;</code>并设置<code>margin:auto;</code></p>
+</li>
+<li><p>绝对定位中固定高度时设置<code>top:50%;margin-top</code>值为高度一半的负值</p>
+</li>
+<li><p>文本垂直居中设置<code>line-height</code>为<code>height</code>值</p>
+</li>
+</ul>
+<h3 id="3-position有哪些属性？"><a href="#3-position有哪些属性？" class="headerlink" title="3. position有哪些属性？"></a>3. <code>position</code>有哪些属性？</h3><ul>
+<li><code>absolute</code>：生成绝对定位的元素，相对于<code>static</code>定位以外的第一个父元素进行定位</li>
+<li><code>fixed</code>：生成绝对定位的元素，相对于浏览器窗口进行定位</li>
+<li><code>relative</code>：生成相对定位的元素，相对于其正常位置进行定位</li>
+<li><code>static</code>：默认值。没有定位，元素出现在正常的流中</li>
+<li><code>inherit</code>：规定从父元素继承<code>position</code>属性的值</li>
+</ul>
+<h3 id="4-盒模型有哪些，区别是什么？如何设置？"><a href="#4-盒模型有哪些，区别是什么？如何设置？" class="headerlink" title="4. 盒模型有哪些，区别是什么？如何设置？"></a>4. 盒模型有哪些，区别是什么？如何设置？</h3><p>   有两种：<code>IE</code>盒模型、标准盒模型</p>
+<p>   区别：<code>IE</code>盒子的宽度由<code>width</code>决定，而标准盒模型的宽度 = <code>width</code> + <code>padding</code> + <code>border</code></p>
+<p>可以通过：</p>
+<ul>
+<li><p><code>box-sizing：content-box</code>设置标准盒模型（默认）</p>
+</li>
+<li><p><code>box-sizing:border-box</code>设置<code>IE</code>盒模型</p>
+</li>
+</ul>
+<h3 id="5-清除浮动的方法"><a href="#5-清除浮动的方法" class="headerlink" title="5. 清除浮动的方法"></a>5. 清除浮动的方法</h3><ul>
+<li>父级<code>div</code>定义<code>height</code></li>
+<li>结尾处加空<code>div</code>标签<code>clear:both</code></li>
+<li>父级<code>div</code>定义伪类<code>:after</code>和<code>zoom</code></li>
+<li>父级<code>div</code>定义<code>overflow:hidden</code></li>
+<li>父级<code>div</code>也浮动，需要定义宽度</li>
+<li>结尾处加<code>br</code>标签<code>clear:both</code></li>
+</ul>
+<h3 id="6-CSS有哪几种引入方式？"><a href="#6-CSS有哪几种引入方式？" class="headerlink" title="6. CSS有哪几种引入方式？"></a>6. CSS有哪几种引入方式？</h3><ul>
+<li><p>内部样式表（写在<code>style</code>标签里）</p>
+</li>
+<li><p>外部样式表（通过<code>link</code>标签引入）</p>
+</li>
+<li><p>行间样式表</p>
+<p>注意：行间样式权重最高。<code>link</code>引入的文件是异步加载的。</p>
+<p>权重：<code>！import</code>（无限大） &gt; 行间样式（1000） &gt; id选择器（100） &gt; class选择器 || 属性选择器 || 伪类选择器（10） &gt; 标签选择器（1） &gt; 通配符选择器（0）</p>
+</li>
+</ul>
+<h3 id="7-Canvas和SVG有什么区别？"><a href="#7-Canvas和SVG有什么区别？" class="headerlink" title="7. Canvas和SVG有什么区别？"></a>7. Canvas和SVG有什么区别？</h3><p><code>svg</code>绘制出来的每一个图形的元素都是独立的<code>DOM</code>节点，能够方便的绑定事件或用来修改。<code>canvas</code>输出的是一整幅画布。</p>
+<p><code>svg</code>输出的图形是矢量图形，后期可以修改参数来自由放大缩小，不会失真和锯齿。而<code>canvas</code>输出标量画布，就像一张图片一样，放大会失真或者锯齿。</p>
+<h3 id="8-display-none-与visibility-hidden-的区别"><a href="#8-display-none-与visibility-hidden-的区别" class="headerlink" title="8. display: none;与visibility: hidden;的区别"></a>8. <code>display: none;</code>与<code>visibility: hidden;</code>的区别</h3><p>联系：他们都能让元素不可见。</p>
+<p>区别：</p>
+<ul>
+<li><code>display: none;</code>会让元素完全从渲染树中消失，渲染的时候不占据任何空间；<code>visibility: hidden;</code>不会让元素从渲染树消失，渲染的元素继续占据空间，只是内容不可见。</li>
+<li><code>display: none;</code>是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；<code>visibility: hidden;</code>是继承属性，子孙节点消失由于继承了<code>hidden</code>，通过设置<code>visibility: visible;</code>可以让子孙节点显示。</li>
+<li>修改常规流中元素中的<code>display</code>通常会造成文档重排。修改<code>visibility</code>属性只会造成本元素的重绘。</li>
+<li>读屏器不会读取<code>display: none;</code>元素内容，会读取<code>visibility: hidden;</code>元素内容。</li>
+</ul>
+<h3 id="9-JS如何设置获取盒模型对应的宽和高？"><a href="#9-JS如何设置获取盒模型对应的宽和高？" class="headerlink" title="9. JS如何设置获取盒模型对应的宽和高？"></a>9. JS如何设置获取盒模型对应的宽和高？</h3><ul>
+<li><code>dom.style.width/height</code>：只能获取使用内联样式元素的宽和高。</li>
+<li><code>dom.currentStyle.width/height</code>：获取的是浏览器渲染以后元素的宽和高，无论是用何种方式引入的css样式都可以，但只有IE浏览器支持这种写法。</li>
+<li><code>window.getComputedStyle(dom).width/height</code>：这种方法获取的也是浏览器渲染以后的元素的宽和高，但这种写法兼容性更好一些。</li>
+<li><code>dom.getBoundingClientRect().width/height</code>：这种方法经常使用的场所是，计算一个元素的绝对位置（相对于视窗左上角），它能拿到元素的<code>left</code>、<code>top</code>、<code>width</code>、<code>height</code>4个属性。</li>
+</ul>
+<h3 id="10-如何创建块级格式化上下文（block-formatting-context），BFC有什么用？"><a href="#10-如何创建块级格式化上下文（block-formatting-context），BFC有什么用？" class="headerlink" title="10. 如何创建块级格式化上下文（block formatting context），BFC有什么用？"></a>10. 如何创建块级格式化上下文（<code>block formatting context</code>），BFC有什么用？</h3><p><strong>创建规则</strong>：</p>
+<ul>
+<li>根元素</li>
+<li>浮动元素（<code>float</code>不取值为<code>none</code>）</li>
+<li>绝对定位元素（<code>position</code>取值为<code>absolute</code>或<code>fixed</code>）</li>
+<li><code>display</code>取值为<code>inline-block</code>、<code>table-cell</code>、<code>table-caption</code>、<code>flex</code>、’inline-flex’之一的元素</li>
+<li><code>overflow</code>不取值为<code>visible</code>的元素</li>
+</ul>
+<p><strong>作用：</strong></p>
+<ul>
+<li>可以包含浮动元素</li>
+<li>不被浮动元素覆盖</li>
+<li>阻止父子元素的<code>margin</code>折叠</li>
+</ul>
+<h3 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h3><h2 id="三、JavaScript"><a href="#三、JavaScript" class="headerlink" title="三、JavaScript"></a>三、JavaScript</h2><h3 id="1-JavaScript有哪几种方式查找Dom节点？"><a href="#1-JavaScript有哪几种方式查找Dom节点？" class="headerlink" title="1. JavaScript有哪几种方式查找Dom节点？"></a>1. <code>JavaScript</code>有哪几种方式查找<code>Dom</code>节点？</h3><ol>
+<li>通过ID获取（<code>document.getElementById(&#39;id&#39;)</code>）</li>
+<li>通过name属性（<code>document.getElementByName(&#39;name&#39;)</code>）</li>
+<li>通过标签名（<code>document.getElementByTagName(&#39;div&#39;)</code>）</li>
+<li>通过类名（<code>document.getElementByClassName(&#39;name&#39;)</code>）</li>
+<li>通过选择器获取一个元素（<code>document.querySelector(&#39;.example&#39;)</code>）</li>
+<li>通过选择器获取一组元素（<code>document.querySelectorAll(&#39;.example&#39;)</code>）</li>
+</ol>
+<h3 id="2-ES6新增了哪些语法？"><a href="#2-ES6新增了哪些语法？" class="headerlink" title="2. ES6新增了哪些语法？"></a>2. <code>ES6</code>新增了哪些语法？</h3><ul>
+<li>新增了模板字符串</li>
+<li>箭头函数</li>
+<li><code>for-of</code>（用来遍历数据）</li>
+<li><code>arguments</code></li>
+<li><code>promise</code></li>
+<li>增加了<code>let</code>、<code>const</code>命令</li>
+<li>引入了<code>module</code>模块的概念</li>
+</ul>
+<h3 id="3-AJAX的原理"><a href="#3-AJAX的原理" class="headerlink" title="3. AJAX的原理"></a>3. <code>AJAX</code>的原理</h3><p>   <code>Ajax</code>的原理简单来说是在用户和服务器之间加了中间层（<code>ajax</code>引擎），通过<code>XMLHTTPRequest</code>对象来向服务器发送异步请求，从服务器获得数据，然后用<code>javascript</code>来操纵<code>DOM</code>而更新页面。使用户操作与服务器响应异步化。这其中最关键的一步就是从服务器获得请求数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 创建连接</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="literal">null</span>;</span><br><span class="line">xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">// 2. 连接服务器 </span></span><br><span class="line">xhr.open(<span class="string">'get'</span>, url, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 3. 发送请求 </span></span><br><span class="line">xhr.send(<span class="literal">null</span>);</span><br><span class="line"><span class="comment">// 4. 接受请求 </span></span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</span><br><span class="line">			success(xhr.responseText);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">			<span class="comment">// false </span></span><br><span class="line">			fail &amp;&amp; fail(xhr.status);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>   <strong><code>ajax</code>有哪些优缺点？</strong></p>
+<ul>
+<li><p>优点：</p>
+<ul>
+<li>通过异步模式，提升了用户体验</li>
+<li>优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用</li>
+<li><code>Ajax</code>在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载</li>
+<li><code>Ajax</code>可以实现动态不刷新（局部刷新）</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>安全问题<code>AJAX</code>暴露了与服务器交互的细节.</li>
+<li>对搜索引擎的支持比较弱。</li>
+<li>不容易调试。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-ajax与axios的区别"><a href="#4-ajax与axios的区别" class="headerlink" title="4. ajax与axios的区别"></a>4. <code>ajax</code>与<code>axios</code>的区别</h3><p>axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端，它本身具有以下特征：</p>
+<ul>
+<li>从浏览器中创建<code>XMLHTTPRequest</code></li>
+<li>从<code>node.js</code>创建<code>http</code>请求</li>
+<li>支持<code>Promise API</code></li>
+<li>客户端支持防止<code>CSRF</code></li>
+<li>提供了一些并发请求的接口（方便了很多操作）</li>
+</ul>
+<h3 id="5-var、let、const的区别"><a href="#5-var、let、const的区别" class="headerlink" title="5. var、let、const的区别"></a>5. <code>var</code>、<code>let</code>、<code>const</code>的区别</h3><ul>
+<li><p><code>var</code></p>
+<p>声明变量的作用域限制在其声明位置的上下文中，而非声明变量总是全局的<br>由于变量声明（以及其他声明）总是在任意代码执行之前处理的，所以在代码中的任意位置声明变量总是等效于在代码开头声明</p>
+</li>
+<li><p><code>let</code></p>
+<p>允许你声明一个作用域被限制在块级中的变量、语句或者表达式<br>let绑定不受变量提升的约束，这意味着<code>let</code>声明不会被提升到当前<br>该变量处于从块开始到初始化处理的“暂存死区”</p>
+</li>
+<li><p><code>const</code></p>
+<p>声明创建一个值的只读引用 (即指针)<br>基本数据当值发生改变时，那么其对应的指针也将发生改变，故造成 const申明基本数据类型时<br>再将其值改变时，将会造成报错， 例如 <code>const a = 3 ; a = 5</code>时 将会报错<br>但是如果是复合类型时，如果只改变复合类型的其中某个<code>Value</code>项时， 将还是正常使用</p>
+</li>
+</ul>
+<h3 id="6-什么是深拷贝、浅拷贝，他们的区别是什么？"><a href="#6-什么是深拷贝、浅拷贝，他们的区别是什么？" class="headerlink" title="6. 什么是深拷贝、浅拷贝，他们的区别是什么？"></a>6. 什么是深拷贝、浅拷贝，他们的区别是什么？</h3><h3 id="7-简单的说下原型链"><a href="#7-简单的说下原型链" class="headerlink" title="7. 简单的说下原型链"></a>7. 简单的说下原型链</h3><p>   每个函数都有 <code>prototype</code> 属性，除了 <code>Function.prototype.bind()</code>，该属性指向原型。<br>   每个对象都有 <code>__proto__</code> 属性，指向了创建该对象的构造函数的原型。其实这个属性指向了<code>[[prototype]]</code>，但是 <code>[[prototype]]</code>是内部属性，我们并不能访问到，所以使用 <code>__proto__</code>来访问。<br>   对象可以通过<code>__proto__</code> 来寻找不属于该对象的属性，<code>__proto__</code>将对象连接起来组成了原型链。</p>
+<h3 id="8-JavaScript原型，原型链-有什么特点？"><a href="#8-JavaScript原型，原型链-有什么特点？" class="headerlink" title="8.  JavaScript原型，原型链 ? 有什么特点？"></a>8.  JavaScript原型，原型链 ? 有什么特点？</h3><p>   每个对象都会在其内部初始化一个属性，就是<code>prototype</code>（原型），当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去<code>prototype</code>里找这个属性，这个<code>prototype</code>又会有自己的<code>prototype</code>，于是就这样一直找下去，也就是我们平时所说的原型链的概念</p>
+<p>   <strong>关系</strong>：<br>   <code>instance.constructor.prototype = instance.__proto__</code></p>
+<p>   <strong>特点</strong>：<br>   <code>JavaScript</code>对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。<br>   当我们需要一个属性时，<code>JavaScript</code>引擎会先看当前对象中是否有这个属性，如果没写的就会查找他的<code>Prototype</code>对象是否有这个属性，如此递推下去，一直检索到<code>Object</code>内建对象。</p>
+<h3 id="9-JS加载时间线"><a href="#9-JS加载时间线" class="headerlink" title="9. JS加载时间线"></a>9. JS加载时间线</h3><ol>
+<li>创建<code>Document</code>对象，开始解析<code>web</code>页面，解析<code>HTML</code>元素和他们的文本内容后添加<code>Element</code>对象和<code>Text</code>节点到文档中。这个阶段<code>Document.readyState = &#39;loading&#39;</code>。</li>
+<li>遇到<code>link</code>外部<code>CSS</code>，创建线程加载，并继续解析文档。</li>
+<li>遇到<code>script</code>外部<code>js</code>，并且没有设置<code>async</code>、<code>defer</code>，浏览器加载并阻塞，等待<code>js</code>加载完成并执行该脚本，然后继续解析文档。</li>
+<li>遇到<code>script</code>外部<code>js</code>，并且设置<code>async</code>、<code>defer</code>，浏览器创建线程加载，并继续解析文档。对于<code>async</code>属性的脚本，脚本加载完成后立即执行。</li>
+<li>遇到<code>img</code>标签等，先正常解析<code>DOM</code>结构，然后浏览器异步加载<code>src</code>，并继续解析文档。</li>
+<li>当文档解析完成，<code>document.readyState = &#39;interactive&#39;</code>。</li>
+<li>文档解析完成后，所有设置有<code>defer</code>的脚本会按照顺序执行。</li>
+<li>当文档解析完成后，<code>document</code>对象触发<code>DOMContentLoaded</code>事件，这也标志着程序执行从同步脚本执行阶段，转化为事件驱动阶段。</li>
+<li>当所有<code>async</code>的脚本加载完成并执行后，<code>img</code>等加载完成后，<code>document.readyState = &#39;complete&#39;</code>，<code>window</code>对象触发<code>load</code>事件。</li>
+<li>从此，页面以异步响应方式处理用户输入，网络事件等。</li>
+</ol>
+<h3 id="10-创建对象有哪几种方法？"><a href="#10-创建对象有哪几种方法？" class="headerlink" title="10. 创建对象有哪几种方法？"></a>10. 创建对象有哪几种方法？</h3><ol>
+<li>对象字面量的方式</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o1 = &#123;<span class="attr">name</span>: <span class="string">"o1"</span>&#125;；</span><br><span class="line"><span class="keyword">var</span> o2 = <span class="keyword">new</span> <span class="built_in">Object</span>(&#123;<span class="attr">name</span>: <span class="string">"o2"</span>&#125;)；</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用构造函数创建对象</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> M = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;<span class="keyword">this</span>.name = name&#125;；</span><br><span class="line"><span class="keyword">var</span> o3 = <span class="keyword">new</span> M(<span class="string">'o3'</span>)；</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><code>Object.create</code></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = &#123;<span class="attr">name</span>: <span class="string">'p'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> o4 = <span class="built_in">Object</span>.create(p)</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-1"><a href="#11-1" class="headerlink" title="11."></a>11.</h3><h2 id="四、jQuery"><a href="#四、jQuery" class="headerlink" title="四、jQuery"></a>四、jQuery</h2><h3 id="1-jquery如何更改css样式？"><a href="#1-jquery如何更改css样式？" class="headerlink" title="1. jquery如何更改css样式？"></a>1. <code>jquery</code>如何更改<code>css</code>样式？</h3><h2 id="五、VUE"><a href="#五、VUE" class="headerlink" title="五、VUE"></a>五、VUE</h2><h3 id="1-请详细说下你对vue生命周期的理解"><a href="#1-请详细说下你对vue生命周期的理解" class="headerlink" title="1. 请详细说下你对vue生命周期的理解"></a>1. 请详细说下你对<code>vue</code>生命周期的理解</h3><p>   答：总共分为8个阶段创建前/后，载入前/后，更新前/后，销毁前/后。</p>
+<p>   <strong>创建前/后</strong>：在<code>beforeCreate</code>阶段，<code>vue</code>实例在挂载元素<code>el</code>和数据对象<code>data</code>都为<code>undefined</code>，还未初始化。在<code>created</code>阶段，<code>vue</code>实例的数据对象<code>data</code>有了，<code>el</code>还没有</p>
+<p>   <strong>载入前/后</strong>：在<code>beforeMount</code>阶段，<code>vue</code>实例的<code>el</code>和<code>data</code>都初始化了，但是还是挂载之前为虚拟的<code>dom</code>节点，<code>data.message</code>还未替换。在<code>mouted</code>阶段，<code>vue</code>实例挂载完成，<code>data.message</code>成功渲染。</p>
+<p>   <strong>更新前/后</strong>：当<code>data</code>变化时，会触发<code>beforeUpdate</code>和<code>updated</code>方法。</p>
+<p>   <strong>销毁前/后</strong>：在执行<code>destroy</code>方法后，对<code>data</code>的改变不会触发周期函数，说明此事<code>vue</code>实例已经解除了事件监听以及和<code>dom</code>的绑定，但是<code>dom</code>结构依然存在。</p>
+<h3 id="2-什么是vue声明周期？"><a href="#2-什么是vue声明周期？" class="headerlink" title="2. 什么是vue声明周期？"></a>2. 什么是<code>vue</code>声明周期？</h3><p>   答：<code>vue</code>实例从创建到销毁的过程，就是生命周期。从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、销毁等一系列过程，称之为 <code>Vue</code>的生命周期。</p>
+<h3 id="3-vue生命周期的作用是什么？"><a href="#3-vue生命周期的作用是什么？" class="headerlink" title="3. vue生命周期的作用是什么？"></a>3. <code>vue</code>生命周期的作用是什么？</h3><p>   生命周期中有多个事件钩子函数，让我们在控制整个<code>vue</code>实例的过程中更容易形成好的逻辑。</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><h2 id="六、网络"><a href="#六、网络" class="headerlink" title="六、网络"></a>六、网络</h2><h3 id="1-从地址栏输入网址到页面展示经过了哪些步骤？"><a href="#1-从地址栏输入网址到页面展示经过了哪些步骤？" class="headerlink" title="1. 从地址栏输入网址到页面展示经过了哪些步骤？"></a>1. 从地址栏输入网址到页面展示经过了哪些步骤？</h3><ol>
+<li>在地址栏输入<code>url</code>。</li>
+<li>浏览器会向<code>DNS</code>服务器发送请求，解析返回<code>IP</code>地址（地址会存储在本地文件里<code>hosts</code>）。</li>
+<li>拿到<code>IP</code>地址，会进行<code>TCP/IP</code>连接，三次握手。</li>
+<li>浏览器向<code>web</code>服务器发送（<code>ajax</code>）请求。</li>
+<li><code>web</code>服务器接收处理请求。</li>
+<li>浏览器接收文件（<code>HTML</code>、<code>JS</code>、<code>CSS</code>、图象等）。</li>
+<li><code>TCP/IP</code>关闭，四次挥手。</li>
+<li>载入解析到的资源文件，渲染页面。  </li>
+</ol>
+<h3 id="2-HTTP和HTTPS的区别"><a href="#2-HTTP和HTTPS的区别" class="headerlink" title="2. HTTP和HTTPS的区别"></a>2. <code>HTTP</code>和<code>HTTPS</code>的区别</h3><ol>
+<li><code>https</code>协议需要到CA申请证书，一般免费证书较少，因而需要一定费用。</li>
+<li><code>http</code>是超文本传输协议，信息是明文传输，<code>https</code>则是具有安全性的<code>ssl</code>加密传输协议。</li>
+<li><code>http</code>和<code>https</code>使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</li>
+<li><code>http</code>的连接很简单，是无状态的。<code>Https</code>协议是由<code>SSL</code>+<code>Http</code>协议构建的可进行加密传输、身份认证的网络协议，比<code>http</code>协议安全。(无状态的意思是其数据包的发送、传输和接收都是相互独立的。无连接的意思是指通信双方都不长久的维持对方的任何信息。)</li>
+</ol>
+<h3 id="3-什么是同源？"><a href="#3-什么是同源？" class="headerlink" title="3. 什么是同源？"></a>3. 什么是同源？</h3><p>同源策略是浏览器的一种安全策略。只有协议、域名、端口均相同的源才属于同源。</p>
+<h3 id="4-什么是跨域？有哪几种解决方案？"><a href="#4-什么是跨域？有哪几种解决方案？" class="headerlink" title="4. 什么是跨域？有哪几种解决方案？"></a>4. 什么是跨域？有哪几种解决方案？</h3><p>因为浏览器处于安全考虑，有同源策略。也就是说，如果协议、域名或者端口有一个不同就是跨域，<code>Ajax</code>请求会失败。</p>
+<p>解决方案：</p>
+<ol>
+<li><code>JSONP</code></li>
+<li><code>CORS</code></li>
+<li><code>document.domain</code></li>
+<li><code>postMessage</code></li>
+</ol>
+<h3 id="5-JSOP的请求方式和优缺点"><a href="#5-JSOP的请求方式和优缺点" class="headerlink" title="5. JSOP的请求方式和优缺点"></a>5. JSOP的请求方式和优缺点</h3><p>由于<code>script</code>的<code>src</code>不受同源策略的限制，所以可以用<code>src</code>进行跨域请求数据。</p>
+<p><strong>请求方式：</strong></p>
+<p>在发送请求的时候，要把回调函数的名称拼接到<code>url</code>的后面给服务器发送过去。这样后端在处理的时候，会提取出来回调函数的名称，拼接成函数执行的方式返回回来，一旦响应请求回来，回调函数就会执行。</p>
+<p><strong>优点：</strong></p>
+<p>兼容性好，简单易用，支持浏览器与服务器双向通信。</p>
+<p><strong>缺点：</strong></p>
+<p>只能支持<code>GET</code>请求</p>
+<h3 id="6-cookie原理"><a href="#6-cookie原理" class="headerlink" title="6. cookie原理"></a>6. cookie原理</h3><p><code>HTTP</code>是无状态的请求/响应连接，当连接断开后，再次连接服务器无法识别用户。我们希望用户再次访问的时候，能够识别它，给他个性化的服务。<code>cookie</code>可以帮助我们弥补这个缺陷实现标记跟踪用户。</p>
+<p><strong>原理：</strong></p>
+<ol>
+<li>当首次访问<code>web</code>站点的时候，服务器会返回响应的时候会带有响应首部<code>set-cookie</code>字段。</li>
+<li>浏览器会自动的把响应的<code>cookie</code>存储在浏览器的数据库中。</li>
+<li>当用户再次访问同一站点时，浏览器会把存储的<code>cookie</code>一起带上发送出去，这样服务器拿到请求的同时也拿到了这个<code>cookie</code>字段。</li>
+</ol>
+<h3 id="7-CORS跨域"><a href="#7-CORS跨域" class="headerlink" title="7.CORS跨域"></a>7.CORS跨域</h3><p><code>cross-origin resource sharing</code> (<code>CORS</code>) 跨域资源共享，是一种使用额外HTTP首部实现跨域获取资源权限的机制。</p>
+<p>除了正常发起请求外，若想实现cors跨域，还需要服务器配置正确的响应首部。否则无法获取<br><code>access-contral-allow-origin: *(localhost)</code> 访问控制允许源。</p>
+<p>主要由后端配置。</p>
+<h3 id="8-HTTP的有哪些请求方式？"><a href="#8-HTTP的有哪些请求方式？" class="headerlink" title="8. HTTP的有哪些请求方式？"></a>8. HTTP的有哪些请求方式？</h3><ol>
+<li><p><code>GET</code>请求</p>
+<ul>
+<li>发送一个请求来取得浏览器上的某一资源</li>
+</ul>
+</li>
+<li><p><code>POST</code>方法</p>
+<ul>
+<li>向<code>URL</code>指定的资源提交数据或附加新的数据</li>
+</ul>
+</li>
+<li><p><code>PUT</code>方法</p>
+<ul>
+<li>跟<code>post</code>方法很像也是向服务器提交数据。但是，他们之间有不同，<code>PUT</code>制定了资源在服务器上的位置，而<code>POST</code>没有</li>
+</ul>
+</li>
+<li><p><code>HEAD</code>方法</p>
+<ul>
+<li>只请求页面的首部</li>
+</ul>
+</li>
+<li><p><code>DELETE</code>方法</p>
+<ul>
+<li>删除服务器上的某资源</li>
+</ul>
+</li>
+<li><p><code>OPITINS</code>方法</p>
+<ul>
+<li>它用于获取当前<code>URL</code>所支持的方法。如果请求成功，会有一个<code>Allow</code>的头包含类似<code>GET</code>、<code>POST</code>这样的信息。</li>
+</ul>
+</li>
+<li><p><code>TEACE</code>方法</p>
+<ul>
+<li><code>teace</code>方法被用于激发一个远程的，应用层的请求消息回路</li>
+</ul>
+</li>
+<li><p><code>CONNECT</code>方法</p>
+<ul>
+<li>把请求连接转换成透明的<code>TCP/IP</code>通道</li>
+</ul>
+</li>
+</ol>
+<h3 id="9-HTTP状态码及含义"><a href="#9-HTTP状态码及含义" class="headerlink" title="9.  HTTP状态码及含义"></a>9.  HTTP状态码及含义</h3><p><strong>1XX：信息状态码</strong></p>
+<ul>
+<li><code>100 Continue</code> 继续，一般在发送<code>post</code>请求时，已发送了<code>http header</code>之后服务端将返回此信息，表示确认，之后发送具体参数信息</li>
+</ul>
+<p><strong>2XX：成功状态码</strong></p>
+<ul>
+<li><code>200 OK</code> 正常返回信息</li>
+<li><code>201 Created</code> 请求成功并且服务器创建了新的资源</li>
+<li><code>202 Accepted</code> 服务器已接受请求，但尚未处理</li>
+</ul>
+<p><strong>3XX：重定向</strong></p>
+<ul>
+<li><code>301 Moved Permanently</code> 请求的网页已永久移动到新位置。</li>
+<li><code>302 Found</code> 临时性重定向。</li>
+<li><code>303 See Other</code> 临时性重定向，且总是使用 <code>GET</code> 请求新的 <code>URI</code>。</li>
+<li><code>304 Not Modified</code> 自从上次请求后，请求的网页未修改过。</li>
+</ul>
+<p><strong>4XX：客户端错误</strong></p>
+<ul>
+<li><code>400 Bad Request</code> 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</li>
+<li><code>401 Unauthorized</code> 请求未授权。</li>
+<li><code>403 Forbidden</code> 对被请求页面的访问被禁止。</li>
+<li><code>404 Not Found</code> 找不到如何与 <code>URI</code> 相匹配的资源。</li>
+</ul>
+<p><strong>5XX：服务器错误</strong></p>
+<ul>
+<li><code>500 Internal Server Error</code> 最常见的服务器端错误。</li>
+<li><code>503 Service Unavailable</code> 服务器端暂时无法处理请求（可能是过载或维护）</li>
+</ul>
+<h3 id="10-HTTP协议的主要特点"><a href="#10-HTTP协议的主要特点" class="headerlink" title="10. HTTP协议的主要特点"></a>10. HTTP协议的主要特点</h3><ul>
+<li>简单快速</li>
+<li>灵活</li>
+<li>无连接</li>
+<li>无状态</li>
+</ul>
+<h3 id="11-POST和GET的区别"><a href="#11-POST和GET的区别" class="headerlink" title="11. POST和GET的区别"></a>11. POST和GET的区别</h3><ul>
+<li><code>GET</code>在浏览器回退时是无害的，而<code>POST</code>会再次提交请求</li>
+<li><code>GET</code>产生的<code>URL</code>地址可以被收藏，而<code>POST</code>不可以</li>
+<li><code>GET</code>请求会被浏览器主动缓存，而<code>POST</code>不会，除非手动设置</li>
+<li><code>GET</code>请求只能进行<code>url</code>编码，而<code>POST</code>支持多种编程方式</li>
+<li><code>GET</code>请求参数会被完整保留在浏览器历史记录里，而<code>POST</code>中的参数不会被保留</li>
+<li><code>GET</code>请求在<code>URL</code>中传送的参数是有长度限制的，而<code>POST</code>没有限制</li>
+<li>对参数的数据类型，<code>GET</code>只接受<code>ASCII</code>字符，而<code>POST</code>没有限制</li>
+<li><code>GET</code>比<code>POST</code>更不安全，因为参数直接暴露在<code>URL</code>上，多以不能用来传递敏感信息</li>
+<li><code>GET</code>参数通过<code>URL</code>传递，<code>POST</code>放在<code>Request body</code>中</li>
+</ul>
+<h3 id="12-什么是持久连接？"><a href="#12-什么是持久连接？" class="headerlink" title="12. 什么是持久连接？"></a>12. 什么是持久连接？</h3><p><code>HTTP</code>协议采用“请求-应答”模式，当使用普通模式，即非<code>Keep-Alive</code>模式时，每个请求/应答客户和服务器都要新建一个连接，完成之后立即断开连接（HTTP协议为无连接的协议）</p>
+<p>当使用<code>Keep-Alive</code>模式（又称持久链接，连接重用）时，<code>Keep-Alive</code>功能使客户端到服务器端的链接持续有效，当出现对服务器的后继请求时，<code>Kepp-Alive</code>功能避免了建立或者重新建立连接。</p>
+<h3 id="13-cookie和session的区别"><a href="#13-cookie和session的区别" class="headerlink" title="13. cookie和session的区别"></a>13. cookie和session的区别</h3><ol>
+<li><code>cookie</code>数据存放在客户端的浏览器上，而<code>session</code>数据放在服务器上。</li>
+<li><code>cookie</code>不是很安全，别人可以分析存放在本地的<code>cookie</code>并进行<code>cookie</code>欺骗。（考虑到安全应当使用<code>cookie</code>）。</li>
+<li><code>session</code>会在一定时间内保存在服务器上。当访问量增对，会比较占用你的服务器性能。（考虑到减轻服务器性能方面，应当使用<code>cookie</code>）。</li>
+<li>单个<code>cookie</code>的数据不能超过4K，很多浏览器都限制一个站点最多保存20个<code>cookie</code>。</li>
+<li>所以建议：<ul>
+<li>将登录信息等重要信息存放在<code>session</code>中</li>
+<li>其他信息如果需要保留可以放在<code>cookie</code>中</li>
+</ul>
+</li>
+</ol>
+<h3 id="14-描述cookie、sessionStorage和localStorage的区别"><a href="#14-描述cookie、sessionStorage和localStorage的区别" class="headerlink" title="14. 描述cookie、sessionStorage和localStorage的区别"></a>14. 描述cookie、sessionStorage和localStorage的区别</h3><ol>
+<li>与服务器交互：<ul>
+<li><code>cookie</code>是网站为了标识用户身份而存储在本地终端上的数据（通常经过加密）。</li>
+<li><code>cookie</code>始终会在同源<code>http</code>请求头中携带（即使不需要），在浏览器和服务器间来回传递。</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存。</li>
+</ul>
+</li>
+<li>存储大小<ul>
+<li><code>cookie</code>数据根据不同浏览器限制，大小一般不超过4K。</li>
+<li><code>sessionStorage</code>和<code>localStorage</code>虽然也有大小限制，但比<code>cookie</code>大的多，可以达到5M或更大。</li>
+</ul>
+</li>
+<li>有效时间</li>
+</ol>
+<ul>
+<li><code>localStorage</code>存储持久数据，浏览器关闭后数据不丢失除非主动删除数据。</li>
+<li><code>seesionStorage</code>数据在当前浏览器窗口关闭后自动删除。</li>
+<li><code>cookie</code>设置的<code>cookie</code>过期时间之前一直有效，与浏览器是否关闭无关。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    
+</div>
+      
+    </div>
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 鲍鹏 的个人博客">鲍鹏</a></p>
+  <p><span>最后更新:</span>2019年10月28日 - 20:10</p>
+  <p><span>原始链接:</span><a href="/2019/10/28/前端面试题/" title="前端面试题">http://yoursite.com/2019/10/28/前端面试题/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/10/28/前端面试题/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+      </div>
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/面试题/" rel="tag"><i class="fa fa-tag"></i>  面试题</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/20/Flex布局/" rel="next" title="Flex布局">
+                  <i class="fa fa-chevron-left"></i> Flex布局
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc" data-target="post-toc-wrap">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTML"><span class="nav-text">一、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-HTML5增加了哪些新特征？"><span class="nav-text">1. HTML5增加了哪些新特征？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-lt-img-gt-的title和alt有什么区别？"><span class="nav-text">2. &lt;img&gt;的title和alt有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-iframe有哪些缺点？"><span class="nav-text">3. iframe有哪些缺点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-HTML全局属性（global-attribute）有哪些？"><span class="nav-text">4. HTML全局属性（global attribute）有哪些？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、CSS"><span class="nav-text">二、CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-CSS3增加了哪些新特征？"><span class="nav-text">1. CSS3增加了哪些新特征？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-让一个元素水平和垂直居中有哪些方法？"><span class="nav-text">2. 让一个元素水平和垂直居中有哪些方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-position有哪些属性？"><span class="nav-text">3. position有哪些属性？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-盒模型有哪些，区别是什么？如何设置？"><span class="nav-text">4. 盒模型有哪些，区别是什么？如何设置？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-清除浮动的方法"><span class="nav-text">5. 清除浮动的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-CSS有哪几种引入方式？"><span class="nav-text">6. CSS有哪几种引入方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Canvas和SVG有什么区别？"><span class="nav-text">7. Canvas和SVG有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-display-none-与visibility-hidden-的区别"><span class="nav-text">8. display: none;与visibility: hidden;的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-JS如何设置获取盒模型对应的宽和高？"><span class="nav-text">9. JS如何设置获取盒模型对应的宽和高？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-如何创建块级格式化上下文（block-formatting-context），BFC有什么用？"><span class="nav-text">10. 如何创建块级格式化上下文（block formatting context），BFC有什么用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11"><span class="nav-text">11.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、JavaScript"><span class="nav-text">三、JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-JavaScript有哪几种方式查找Dom节点？"><span class="nav-text">1. JavaScript有哪几种方式查找Dom节点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ES6新增了哪些语法？"><span class="nav-text">2. ES6新增了哪些语法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-AJAX的原理"><span class="nav-text">3. AJAX的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-ajax与axios的区别"><span class="nav-text">4. ajax与axios的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-var、let、const的区别"><span class="nav-text">5. var、let、const的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-什么是深拷贝、浅拷贝，他们的区别是什么？"><span class="nav-text">6. 什么是深拷贝、浅拷贝，他们的区别是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-简单的说下原型链"><span class="nav-text">7. 简单的说下原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-JavaScript原型，原型链-有什么特点？"><span class="nav-text">8.  JavaScript原型，原型链 ? 有什么特点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-JS加载时间线"><span class="nav-text">9. JS加载时间线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-创建对象有哪几种方法？"><span class="nav-text">10. 创建对象有哪几种方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1"><span class="nav-text">11.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、jQuery"><span class="nav-text">四、jQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-jquery如何更改css样式？"><span class="nav-text">1. jquery如何更改css样式？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、VUE"><span class="nav-text">五、VUE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-请详细说下你对vue生命周期的理解"><span class="nav-text">1. 请详细说下你对vue生命周期的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-什么是vue声明周期？"><span class="nav-text">2. 什么是vue声明周期？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-vue生命周期的作用是什么？"><span class="nav-text">3. vue生命周期的作用是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4"><span class="nav-text">4.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、网络"><span class="nav-text">六、网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-从地址栏输入网址到页面展示经过了哪些步骤？"><span class="nav-text">1. 从地址栏输入网址到页面展示经过了哪些步骤？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-HTTP和HTTPS的区别"><span class="nav-text">2. HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-什么是同源？"><span class="nav-text">3. 什么是同源？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-什么是跨域？有哪几种解决方案？"><span class="nav-text">4. 什么是跨域？有哪几种解决方案？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-JSOP的请求方式和优缺点"><span class="nav-text">5. JSOP的请求方式和优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-cookie原理"><span class="nav-text">6. cookie原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-CORS跨域"><span class="nav-text">7.CORS跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-HTTP的有哪些请求方式？"><span class="nav-text">8. HTTP的有哪些请求方式？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-HTTP状态码及含义"><span class="nav-text">9.  HTTP状态码及含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-HTTP协议的主要特点"><span class="nav-text">10. HTTP协议的主要特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-POST和GET的区别"><span class="nav-text">11. POST和GET的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-什么是持久连接？"><span class="nav-text">12. 什么是持久连接？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-cookie和session的区别"><span class="nav-text">13. cookie和session的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-描述cookie、sessionStorage和localStorage的区别"><span class="nav-text">14. 描述cookie、sessionStorage和localStorage的区别</span></a></li></ol></li></ol></div>
+          </div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpeg"
+      alt="鲍鹏">
+  <p class="site-author-name" itemprop="name">鲍鹏</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/BP-baopeng" title="GitHub &rarr; https://github.com/BP-baopeng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:841244060@qq.com" title="E-Mail &rarr; mailto:841244060@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.alloyteam.com/nav/" title="http://www.alloyteam.com/nav/" rel="noopener" target="_blank">Web前端导航</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.chuangzaoshi.com/code" title="http://www.chuangzaoshi.com/code" rel="noopener" target="_blank">创造狮导航</a>
+        </li>
+      
+        <li class="links-of-blogroll-item">
+          <a href="http://www.36zhen.com/t?id=3448" title="http://www.36zhen.com/t?id=3448" rel="noopener" target="_blank">前端书籍资料</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鲍鹏</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
